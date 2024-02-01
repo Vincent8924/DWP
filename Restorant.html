@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="icon" type="image/x-icon" href="title logo.ico">
+        <link rel="stylesheet" type="text/css" href="vv.css">
+
+        <title>Kerry's Kitchen | KuanTan Hotels</title><img>
+        
+    </head>
+    <body >
+        
+        <img src="KuanTan Hotels2.png" id="logo"/>
+        <img src="shoppingcart.png" alt="cart" class="cart">
+        <br/>
+        <div id="line" class="choice">
+
+          <a href="about us.html" >ABOUT US</a>
+          <a href="c room.html" >ROOM</a>   
+          <a href="food.html" >FOOD</a>
+          <a href="experience.html" >EXPERIENCE</a>
+          <a href="event.html" >EVENT</a>
+          <a href="gallery.html" >GALLERY</a>
+        </div>
+ 
+        <br/><br/>
+        
+        <h1 class="vh1">Kerry's Kitchen</h1>
+        <h3 class="vh3">Restorant</h3>
+
+        <div id="slideshow" class="container" >
+            <img src="Restorant/res1.png" class="active">
+            <img src="Restorant/res2.png">
+            <img src="Restorant/res3.png">
+            <img src="Restorant/res4.png">
+            
+        </div>
+        
+        <h2>Restorant Story</h2>
+        
+        <div class="res_story">
+          <img src="Restorant/restorant story.png" alt="Res_img1">
+          <div class="res_story_p">
+            <p >
+            Kerry's Kitchen serves well-cooked Asian and International cuisine for buffet breakfast, lunch and dinner. There are also a variety of à la carte dishes on offer.
+            <br>
+            <br>
+            Suited for both adults and children, the buffet lunch and dinner available on weekdays and weekends allow adults to enjoy unlimited servings of appetizers, main courses and desserts, accompanied by unlimited champagne, wines, draft beer, juices and soft drinks, while the little ones get to experience the thrill and fun of Adventure Zone.
+            <br> 
+            <br>
+            Showcasing several live-cooking stations, passionate kitchen theatrics is matched in spirit by a team of energetic service staff at Kerry’s Kitchen. Design elements of Izumi stones, wood and clay creates a space that offers guests the freedom of just being; relaxed, comfortable and feeling right at home, with flavors and aromas transporting them back to their childhood days.
+            </p>
+          </div>
+          
+
+
+        </div>
+
+        <br>
+        <h2 class="vh2">Featured Recommended</h2>
+        <h4 class="vh4">Asian and International Dining</h4>
+        <div class="food_img">
+            <img src="Restorant/Seafood.png" alt="Seafood">
+            <div>Seafood</div>
+          </div>
+        
+          
+          <div class="food_img">
+            <img src="Restorant/Dimsum.png" alt="DimSum">
+            <div >DimSum</div>
+          </div>
+        
+          
+          <div class="food_img">
+            <img src="Restorant/Japanese Food.png" alt="Japanese Food">
+            <div>Japanese Food</div>
+          </div>
+        
+          
+          <div class="food_img">
+            <img src="Restorant/Sweetie.png" alt="Sweetie">
+            <div>Sweetie</div>
+          </div>
+        
+        <br>
+
+        
+        
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            var images = $(".container img"); // 获取所有图片
+
+            var currentIndex = 0; // 当前图片索引
+
+            setInterval(function() {
+                images.eq(currentIndex).removeClass("active"); // 移除当前图片的 active 类
+
+                currentIndex = (currentIndex + 1) % images.length; // 计算下一张图片的索引
+
+                images.eq(currentIndex).addClass("active"); // 添加下一张图片的 active 类
+            }, 3000); // 设置切换间隔时间，单位为毫秒
+        });
+    </script>
+    </body>
+
+
+</html>

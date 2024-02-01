@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="icon" type="image/x-icon" href="title logo.ico">
+        <link rel="stylesheet" type="text/css" href="vv.css">
+
+        <title>Health & Leisure | KuanTan Hotels</title><img>
+        
+    </head>
+    <body >
+        
+        <img src="KuanTan Hotels2.png" id="logo"/>
+        <img src="shoppingcart.png" alt="cart" class="cart">
+        <br/>
+        <div id="line" class="choice">
+
+          <a href="about us.html" >ABOUT US</a>
+          <a href="c room.html" >ROOM</a>   
+          <a href="food.html" >FOOD</a>
+          <a href="experience.html" >EXPERIENCE</a>
+          <a href="event.html" >EVENT</a>
+          <a href="gallery.html" >GALLERY</a>
+        </div>
+ 
+        <br/><br/>
+  
+        <div id="slideshow" class="container" >
+            <img src="Health & Leisure/Gymnasium.jpg" class="active">
+            <img src="Health & Leisure/Children's Wading Pool.jpg">
+            <img src="Health & Leisure/Swimming Pool.jpg">
+            <img src="Health & Leisure/Sauna.jpg">
+            
+        </div>
+
+        <div id="intro_HL">
+            <h2>Create Your Space with a total club experience</h2>
+            <p class="intro_HL">
+            We offer a colorful array of recreational facilities to make your stay even more memorable. In our oasis-like resort, you can enjoy a variety of recreational activities. We are proud of our swimming pool area, which offers a tranquil and cozy pool environment where you can relax in the crystal clear water. For guests who love fitness, our hotel has a first-class gym with state-of-the-art equipment to help you stay active and healthy. And for the little ones, we have an exclusive children's pool where they can play in a safe and enjoyable environment. If you're craving a warming experience, come and relax in our sauna area. We are committed to providing you with a range of attentive services to make your stay at our hotel a memorable and peaceful one. Whether you are looking for an invigorating workout or a peaceful relaxation, our hotel facilities will cater to your every need. We look forward to your enjoyable vacation here!
+            </p>
+        </div>
+        
+        <div class="table_HL">
+            <h2 >Opening Hours</h2>
+        
+            <table class="table_HL">
+                <thead>
+                <tr>
+                    <th>Facilities</th>
+                    <th>Hours</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Swimming Pool</td>
+                    <td>6 a.m. to 10:30 p.m.</td>
+                    
+                </tr>
+                <tr>
+                    <td>Children's Wading Pool</td>
+                    <td>6 a.m. to 10:30 p.m.</td>
+                    
+                </tr>
+                <tr>
+                    <td>Gymnasium</td>
+                    <td>6 a.m. to 11 p.m.</td>
+                    
+                </tr>
+                <tr>
+                    <td>Sauna</td>
+                    <td>6 a.m. to 11 p.m.</td>
+                    
+                </tr>
+                
+                </tbody>
+            </table>    
+        </div>
+        
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            var images = $(".container img"); // 获取所有图片
+
+            var currentIndex = 0; // 当前图片索引
+
+            setInterval(function() {
+                images.eq(currentIndex).removeClass("active"); // 移除当前图片的 active 类
+
+                currentIndex = (currentIndex + 1) % images.length; // 计算下一张图片的索引
+
+                images.eq(currentIndex).addClass("active"); // 添加下一张图片的 active 类
+            }, 3000); // 设置切换间隔时间，单位为毫秒
+        });
+    </script>
+    </body>
+
+
+</html>

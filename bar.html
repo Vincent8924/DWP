@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="icon" type="image/x-icon" href="title logo.ico">
+        <link rel="stylesheet" type="text/css" href="vv.css">
+
+        <title>Centro | KuanTan Hotels</title><img>
+        
+    </head>
+    <body >
+        
+        <img src="KuanTan Hotels2.png" id="logo"/>
+        <img src="shoppingcart.png" alt="cart" class="cart">
+        <br/>
+        <div id="line" class="choice">
+
+          <a href="about us.html" >ABOUT US</a>
+          <a href="c room.html" >ROOM</a>   
+          <a href="food.html" >FOOD</a>
+          <a href="experience.html" >EXPERIENCE</a>
+          <a href="event.html" >EVENT</a>
+          <a href="gallery.html" >GALLERY</a>
+        </div>
+ 
+        <br/><br/>
+        
+        <h1 class="vh1">Centro</h1>
+        <h3 class="vh3">Lounge and Bar</h3>
+
+        <div id="slideshow" class="container" >
+            <img src="Bar/Bar1.png" class="active">
+            <img src="Bar/Bar2.png">
+        </div>
+        
+        <h2>Restorant Story</h2>
+        
+        <div class="res_story">
+          <img src="Bar/barstory.png" alt="Bar_img1">
+          <div class="res_story_p">
+            <p >
+                An icon in the city's bar and nightlife scene, award-winning Centro draws an affluent clientele. A heady experience heightened by its service concept of “Beautiful People Serving Beautiful People’, it is a popular spot and boasts live music, real cocktails, great wines and delicious food.
+                <br><br>
+                With hundreds of cocktail and wine choices and a food menu, guests are spoilt for choice. Aside from an extensive selection of New and Old World wines, champagnes, hard liquors, whiskies, beers, mocktails and non-alcoholic drinks, all manners of cocktails prevail; classics, champagne-based, martinis, mojitos…the list goes on and on. Guests can even try the Centro Star creations concocted by Centros very own mixologists.
+            </p>
+          </div>
+          
+
+
+        </div>
+
+        <br>
+        <h2 class="vh2">Featured Recommended</h2>
+        <h4 class="vh4">Exquisite wines paired with delectable dishes</h4>
+        
+        <div class="food_img">
+            <img src="Bar/Salad.png" alt="Salad">
+            <div>Salad</div>
+        </div>
+        <div class="food_img">
+            <img src="Bar/Sweetie.png" alt="Sweetie">
+            <div>Sweetie</div>
+        </div>
+        <div class="food_img">
+            <img src="Bar/alcohol.jpg" alt="Alcoholic Drinks">
+            <div >Alcoholic Drinks</div>
+        </div>
+        <br>
+
+        
+        
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            var images = $(".container img"); // 获取所有图片
+
+            var currentIndex = 0; // 当前图片索引
+
+            setInterval(function() {
+                images.eq(currentIndex).removeClass("active"); // 移除当前图片的 active 类
+
+                currentIndex = (currentIndex + 1) % images.length; // 计算下一张图片的索引
+
+                images.eq(currentIndex).addClass("active"); // 添加下一张图片的 active 类
+            }, 3000); // 设置切换间隔时间，单位为毫秒
+        });
+    </script>
+    </body>
+
+
+</html>

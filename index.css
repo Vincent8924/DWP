@@ -1,0 +1,121 @@
+
+img.cart
+{
+    float: right;
+    width: 50px;
+}
+.login_signup
+{
+    float: right;
+}
+#login
+{
+    margin-right: 50px;
+}
+
+.index_container img {
+    display: block;
+    height: 50vh;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.imgdesign
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.textdesign
+{
+    display: flex;
+    justify-content: center; /* 仅在水平方向上居中 */
+}
+
+body
+{
+    
+    width: 90%; /* 设置容器宽度 */
+    margin: 0 auto; /* 将左右边距设置为自动以实现居中 */
+    
+}
+
+#logo
+{
+    height: 50px;
+}
+
+
+#line 
+{
+    border: 0px;
+    
+    background-image: url('线条.png');
+    
+    background-repeat: repeat-x;
+    height: 40px;
+}
+
+#slideshow img:not(.active) 
+{
+    display: none;
+}
+
+
+.choice a
+{
+  font-size: 20px;
+  text-decoration: none; /* 移除下划线 */
+  color: white; /* 使用父元素的颜色 */
+  margin-left: 50px;
+  position: relative;
+  top: 8px; /* 使用 position 和 top 调整位置 */
+}
+
+
+#hotel_app img
+{
+    width: 100%;
+    height: 50vh; /* 设置图片高度为页面高度的一半 */
+}
+
+#wel_slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 100px;
+}
+
+#wel_slider p {
+    
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    text-align: center; /* 居中文本内容 */
+    transition: opacity 1s ease-in-out;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+#wel_slider p.active {
+    opacity: 1;
+}
+
+#wel_slider img {
+    width: 100px; /* 调整图片宽度 */
+    height: 50px; /* 调整图片高度 */
+    margin-left: 5px; /* 调整图片与文本之间的间距 */
+    position: absolute;
+}
+
+
+
+
+
+
+

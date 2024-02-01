@@ -1,0 +1,68 @@
+#logo
+{
+    height: 50px;
+
+}
+
+.choice a
+{
+  font-size: 20px;
+  text-decoration: none; 
+  color: white; 
+  margin-left: 50px;
+  position: relative;
+  top: 8px; 
+}
+#line 
+{
+    border: 0px;
+    background-image: url('线条.png');
+    background-repeat: repeat-x;
+    height: 40px;
+}
+
+a.nowpage
+{
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px; 
+}
+
+.chart
+{
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid
+{
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    text-align: center;
+}
+
+.grid_container 
+{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(136, 136, 136, 0.767);
+    border: rgba(0, 0, 0, 0.849) solid ;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  
+  
+.grid_item:hover 
+{
+    background-color: #d0d0d0;
+}

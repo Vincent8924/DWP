@@ -1,0 +1,232 @@
+.container img {
+    display: block;
+    height: 400px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.cart
+{
+    float: right;
+    width: 50px;
+}
+
+.index_container img {
+    display: block;
+    height: 50vh;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.imgdesign
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.textdesign
+{
+    display: flex;
+    justify-content: center; /* 仅在水平方向上居中 */
+}
+
+body
+{
+    
+    width: 90%; /* 设置容器宽度 */
+    margin: 0 auto; /* 将左右边距设置为自动以实现居中 */
+    
+}
+
+#logo
+{
+    height: 50px;
+}
+
+#wupx
+{
+    font-size: 50px;
+}
+
+#shipx
+{
+    font-size: 40px;
+}
+
+#sanpx
+{
+    font-size: 30px;
+}
+
+#erpx
+{
+    font-size: 20px;
+}
+
+#line 
+{
+    border: 0px;
+     /* 设置背景图片 */
+    background-image: url('线条.png');
+    /* 设置背景图片在水平方向上重复 */
+    background-repeat: repeat-x;
+    height: 40px;
+}
+
+
+
+#button
+{
+    display: block;
+
+}
+
+    /* 添加 CSS 样式来隐藏除了.active状态的图片 */
+#slideshow img:not(.active) 
+{
+    display: none;
+}
+
+
+.choice a
+{
+  font-size: 20px;
+  text-decoration: none; /* 移除下划线 */
+  color: white; /* 使用父元素的颜色 */
+  margin-left: 50px;
+  position: relative;
+  top: 8px; /* 使用 position 和 top 调整位置 */
+}
+
+#intro_HL 
+{
+    align-items: center; /* 将内容垂直居中 */   
+    margin: auto; /* 去除默认的页面边距 */
+    text-align: center;
+    width: 1000px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+/*TABLE*/
+.table_HL 
+{
+    align-items: center; /* 将内容垂直居中 */   
+    text-align: center;
+    width: 1000px;
+    margin-top: 20px;
+    border-collapse: collapse;
+    margin: auto; /* 去除默认的页面边距 */
+    margin-bottom: 100px;
+}
+
+.table_HL td, .table_HL th 
+{
+    border: 1px solid #ddd; /* 单元格边框颜色 */
+    padding: 8px;
+}
+
+
+
+.food_img {
+    display: inline-block;
+    margin: 10px; 
+    margin-top: 5px;
+    text-align: center;
+  }
+  
+.food_img img {
+    width: 200px; 
+    height: 150px; 
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 0 auto; 
+}
+  
+.res_story 
+{
+    display: flex;
+    
+}
+
+.res_story img
+{
+    width: 300px;
+}
+
+.res_story_p
+{
+    margin-right: 100px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    width: 500px;
+}
+
+.vh1
+{
+    margin-bottom: 0;
+}
+.vh2
+{
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.vh3
+{
+    margin-top: 0px;
+}  
+
+.vh4
+{
+    margin-left: 10px;
+}
+
+
+#hotel_app img
+{
+    width: 100%;
+    height: 50vh; /* 设置图片高度为页面高度的一半 */
+}
+
+#wel_slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 100px;
+}
+
+#wel_slider p {
+    
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    text-align: center; /* 居中文本内容 */
+    transition: opacity 1s ease-in-out;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+#wel_slider p.active {
+    opacity: 1;
+}
+
+#wel_slider img {
+    width: 100px; /* 调整图片宽度 */
+    height: 50px; /* 调整图片高度 */
+    margin-left: 5px; /* 调整图片与文本之间的间距 */
+    position: absolute;
+}
+
+
+
+
+
+
+
