@@ -1,0 +1,147 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+#line 
+{
+    border: 0px;
+    background-image: url('image/black.png');
+    background-repeat: repeat-x;
+    height: 40px;
+}
+
+.choice a
+{
+  font-size: 20px;
+  text-decoration: none; 
+  color: white; 
+  margin-left: 50px;
+  position: relative;
+  top: 8px; 
+}
+
+.Payment .title
+{
+    text-align: center;
+
+}
+
+.Payment .title h2{
+    font-weight: bold;
+    font-size: 27px;
+}
+
+.Payment .title p{
+    font-size: 23px;
+    margin:0 auto;
+}
+
+.payment{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.formBox{
+    position: relative;
+    width: 100%;
+    background-color: orange;
+    box-shadow: 0 5px 35px black;
+    padding:30px 40px;
+    border-radius: 10px;
+}
+.formBox .row50
+{
+    display: flex;
+    gap:20px;
+}
+
+.inputBox{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+.inputBox label{
+    color:blue;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    display: block;
+}
+
+.inputBox input{
+    padding: 10px;
+    font-size: 1.1em;
+    outline: none;
+    border: 1px solid black;
+}
+
+.container {
+    color:green;
+    height:100%;
+    width:100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width:100px;
+    height:60px;
+}
+
+#button
+{
+    display: block;
+
+}
+
+   
+#slideshow img:not(.active) 
+{
+    display: none;
+}  
+
+select{
+    border: 1px solid black;
+    padding:10px 150px;
+}
+.button-area input[type="submit"]
+{
+    background: gray;
+    color: white;
+    border: none;
+    font-size: 1.1em;
+    max-width: 120px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 14px 15px;
+    
+}
+
+.button-area span{
+    margin-left: 20px;
+    color: blue;
+    font-weight: bold;
+    
+}
+
+.text-danger{
+    color:red;
+}
+
+.error
+{
+    color:red;
+  
+}
+
+
