@@ -138,13 +138,13 @@
                                         </div>
 
                                         <div class="row100">
-                                            <div class="button-area">
-                                                <input type="submit" name="submit" value="SUBMIT">
-                                                <p id="success"></p>                                  
-                                            </div>                                           
+                                        <div class="button-area">
+                                        <input type="submit" name="submit" value="SUBMIT">
+                                        <p id="success"></p> 
+                                        <div class="error"><?php if(!empty($msg)){echo $msg;}?></div>                                 
+                        </div>                                           
                                         </div>
                                     </div>
-                                    <div class="error"><?php if(!empty($msg)){echo $msg;}?></div>
                                 </form>
 
                             </div>
@@ -153,19 +153,30 @@
                                 <br/>
                                 <div class="addressBox">
                                     <div>
-                                        <span><img src="location-outline.svg"></span>
+                                        <span><ion-icon name="location-outline"></ion-icon></span>
                                         <br/>
                                         <p> Teluk Cempedak, 25050 Kuantan, Pahang, Malaysia.</p>
                                     </div>
                                     <br/>
+                                    <div>
+                                        <span><ion-icon name="call-outline"></ion-icon></span>
+                                        <br/>
+                                        <p> +601163056102</p>
+                                    </div>
+                                    <br/>
+                                    <div>
+                                        <span><ion-icon name="mail-outline"></ion-icon></span>
+                                        <br/>
+                                        <p> ljvkuantan@gmail.com</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="contact map">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7973.5428783378!2d102.28077820711455!3d2.2393216074320024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d1e572c43f3e8b%3A0x81e09df4127e42e6!2sPantai%20Hospital%20Ayer%20Keroh!5e0!3m2!1sen!2smy!4v1700529618214!5m2!1sen!2smy" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
                             </div>
 
-                                </div>
-
-    
-    </body>               
+                                </div>   
+    </body>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>               
 </html>
