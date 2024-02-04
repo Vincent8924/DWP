@@ -158,7 +158,7 @@ select{
     </style>
     <?php
     $error = 0;
-    include("dataconnection_rc.php");
+    include("dataconnection.php");
     if(isset($_REQUEST['submit']))
     {
         $first_name = $_REQUEST['first_name'];
