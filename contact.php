@@ -8,7 +8,7 @@
     </head>
     <?php
     $error = 0;
-    include("dataconnection_contact.php");
+    include("dataconnection.php");
     if(isset($_REQUEST['submit']))
     {
         $first_name = $_REQUEST['first_name'];
