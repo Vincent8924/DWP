@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php include('dataconnection.php'); ?>
 <html>
     <head>
         <meta charset="UTF-8"/>
@@ -6,65 +6,78 @@
         <link rel="stylesheet" type="text/css" href="room.css">
 
         <title>Hotels and Resorts | KuanTan Hotels</title>
-   
+  
     </head>
-    <body>
+    <body >
+        
         <img src="KuanTan Hotels2.png" id="logo"/>
         <br/>
         <div id="line" class="choice">
 
-            <a href="aboutus.html" >ABOUT US</a>
-            <a href="c room.html"  class="nowpage">ROOM</a>
-            <a href="food.html" >FOOD</a>
-            <a href="experience.html" >EXPERIENCE</a>
-            <a href="event.html" >EVENT</a>
-            <a href="gallery.html" >GALLERY</a>
-            
+          <a href="about us.html" >ABOUT US</a>
+          <a href="c room.html" class="nowpage">ROOM</a>   
+          <a href="food.html" >FOOD</a>
+          <a href="experience.html" >EXPERIENCE</a>
+          <a href="event.html" >EVENT</a>
+          <a href="gallery.html" >GALLERY</a>
           
-          
-          
-          
-          </div>
+        
+        
+        
+        
+        </div>
+ 
         <br/><br/>
         
         
         
         
         <div id="slideshow" class="container" >
-            
-            <img src="room b/room b 1.png" class="active">
-            <img src="room b/room b 2.png">
-            <img src="room b/room b 3.png">
-            <img src="room b/room b 4.png">
+            <img src="room a/room a 1.png" class="active">
+            <img src="room a/room a 2.png">
+            <img src="room a/room a 3.png">
+            <img src="room a/room a 4.png">
+            <img src="room a/room a 5.png">
         </div>
+
+
+
+
+
         <br/><br/>
-        <div id="shipx">KuanTan Hotels</div>
+        <div id="shipx" >KuanTan Hotels</div>
         <br/>
-        <div id="wupx">Specialty Suite</div>
-        <br/><p><hr/></p><br/>
-        <div id="sanpx">Spacious comfort with exquisite garden views.</div>
-        <br/>
-        <div id="erpx">For those requiring extra space and who may wish to entertain guests of their own, the Specialty Suite is the ideal option. It features a stylish integrated sitting room and dining area, along with a well-equipped kitchenette.</div>
-        
+        <span id="wupx" >Presidential Suite</span>
+
+        <button><a href="order.php?buy&room_type=Presidential Suite">book now</a></button>
 
         
+   
+      
+        
+        <br/>
+        <br/><p><hr/></p><br/>
+        <div  id="sanpx" >Luxurious furniture with a modern twist.</div>
+        <br/>
+        <div  id="erpx" >The Presidential Suite is the most spectacular lodging option available in Beijing at the Kerry Hotel. The suite is perfect for business meetings or elegant social events. With its chic decor, it exudes the perfect amount of luxury and elegance.</div>
+        
+
         <br/><br/>
         <h1>Features</h1>
             <ul id="erpx">
-                <li>There is 104 sqm / 1,119 sqf of flexibility in each suite.</li>
-                <br/>
-                <li>Gorgeous vistas of the garden</li>
-                <br/>
-                <li>One-bedroom apartments with a dining space, kitchenette, and large, cosy living room.</li>
-                <br/>
-                <li>Huge, contemporary bathrooms including extra big towels and bathrobes.</li>
+                <li>The space in the suite is 224 sqm / 2,411 sqf.</li>
                 <br/>
                 <li>The Club Lounge is open to guests and offers all of its amenities.</li>
                 <br/>
+                <li>Large panel doors lead to the roomy living room and master bedroom.</li>
+                <br/>
+                <li>Within the open living space are a formal reception area, a presidential study, a formal dining room with a feature kitchen, and a casual TV lounge.</li>
+                <br/>
+                <li>Huge modern bathroom with loft-style elements, complete with a huge steam shower and sauna, bathrobes and extra large towels. Also included in the bathroom area are a sofa and a cheval dressing mirror.</li>
+                <br/>
                 <li>WiFi</li>
             </ul>
-  
-
+ 
         <br/><h1>Facilities</h1>     
         <p>
                 <h2>Personal Care & Bathing</h2>
@@ -77,11 +90,15 @@
                 <br/>
                 <li>amenities for bathrooms</li>
                 <br/>
-                <li>Showers of rain</li>
+                <li>Rainshower with shower jets</li>
+                <br/>
+                <li>Sauna</li>
+                <br/>
+                <li>Steam bath</li>
+                <br/>
+                <li>Bathtub with spa jets</li>
             </ul>
         </p>
-
-
         
         <p>
             <h2>Entertainment & Media</h2>
