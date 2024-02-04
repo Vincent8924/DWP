@@ -23,10 +23,12 @@ CREATE TABLE `Payment` (
   `card_CVV` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-CREATE TABLE `Rating & Comment` (
+CREATE TABLE `Comment` (
   `first_name` varchar(200) NOT NULL,
   `last_name` varchar(200) NOT NULL,
   `room_type` varchar(200) NOT NULL,
   `rating` int NOT NULL,
   `comment` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
