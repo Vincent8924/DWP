@@ -61,7 +61,7 @@ input {
     box-sizing: border-box;
 }
 
-#password-confirm-message {
+.alert {
     color: red;
 }
 
