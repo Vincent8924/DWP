@@ -36,7 +36,7 @@
 
             <?php
             $result = mysqli_query($connect, "SELECT * FROM room_category");	
-            while($row = mysqli_fetch_assoc($result)) {
+            
             ?>	
                 <tr>
                     <td><img class="picture"  src="<?php echo $row['picture']?>" ></td>
@@ -44,7 +44,7 @@
                     <td><?php echo $row['room_quantity']?></td>
                 </tr>
             <?php
-            }		
+            	
             ?>
         </table>
 

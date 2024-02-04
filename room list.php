@@ -37,9 +37,9 @@
                 
         <tr>
         <td><img class="picture"  src="  <?php echo $row['picture']?>" ></td>
-            <td><?php echo $row['room_type']?></td>
-            <td><?php echo $row['room_quantity']?></td>
-            <td class="text"><a href="order.php?buy&room_type=<?php echo $row['room_type']; ?>">Buy Now</a></td>
+            <th><?php echo $row['room_type']?></th>
+            
+            <th><a href="order.php?buy&room_type=<?php echo $row['room_type']; ?>" ><button>Buy Now</button></a></th>
             
         </tr>
         <?php
