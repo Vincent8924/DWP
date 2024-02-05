@@ -8,7 +8,7 @@
     </head>
     <?php
     $error = 0;
-    include("dataconnection.php");
+    include("dataconnection_contact.php");
     if(isset($_REQUEST['submit']))
     {
         $first_name = $_REQUEST['first_name'];
@@ -139,7 +139,7 @@
 
                                         <div class="row100">
                                         <div class="button-area">
-                                        <input type="submit" name="submit" value="SUBMIT">
+                                        <input type="submit" name="submit" onclick="return confirmation();" value="SUBMIT">
                                         <p id="success"></p> 
                                         <div class="error"><?php if(!empty($msg)){echo $msg;}?></div>                                 
                         </div>                                           
@@ -178,5 +178,12 @@
                                 </div>   
     </body>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>               
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>     
+<script>
+function confirmation()
+{
+	answer = confirm("Do you want to submit your contact?");
+	return answer;
+}
+    </script>          
 </html>
