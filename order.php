@@ -94,7 +94,9 @@
                 ?>
                 <script type="text/javascript">
                     alert("Record saved!");
+                    window.location.href = "room list.php";
                 </script>
+
                 <?php
 
             }

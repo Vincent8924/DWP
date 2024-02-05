@@ -15,7 +15,7 @@
         <div id="line" class="choice">
 
           <a href="about us.html" >ABOUT US</a>
-          <a href="c room.html" class="nowpage">ROOM</a>   
+          <a href="room list.php" class="nowpage">ROOM</a>   
           <a href="food.html" >FOOD</a>
           <a href="experience.html" >EXPERIENCE</a>
           <a href="event.html" >EVENT</a>
@@ -49,7 +49,7 @@
         <br/>
         <span id="wupx" >Presidential Suite</span>
 
-        <button><a href="order.php?buy&room_type=Presidential Suite">book now</a></button>
+        <a href="order.php?buy&room_type=Presidential Suite"><button>book now</button></a>
 
         
    

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php include('dataconnection.php'); ?>
 <html>
     <head>
         <meta charset="UTF-8"/>
@@ -14,7 +14,7 @@
         <div id="line" class="choice">
 
             <a href="aboutus.html" >ABOUT US</a>
-            <a href="c room.html"  class="nowpage">ROOM</a>
+            <a href="room list.php"  class="nowpage">ROOM</a>
             <a href="food.html" >FOOD</a>
             <a href="experience.html" >EXPERIENCE</a>
             <a href="event.html" >EVENT</a>
@@ -40,7 +40,9 @@
         <br/><br/>
         <div id="shipx">KuanTan Hotels</div>
         <br/>
-        <div id="wupx">Specialty Suite</div>
+        <span id="wupx">Specialty Suite</span>
+
+        <a href="order.php?buy&room_type=Specialty Suite"><button>book now</button></a>
         <br/><p><hr/></p><br/>
         <div id="sanpx">Spacious comfort with exquisite garden views.</div>
         <br/>
