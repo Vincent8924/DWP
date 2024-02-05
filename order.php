@@ -39,10 +39,11 @@
             
             ?>	
                 <tr>
-                    <td><img class="picture"  src="<?php echo $row['picture']?>" ></td>
-                    <td><?php echo $row['room_type']?></td>
-                    <td><?php echo $row['room_quantity']?></td>
+                    <td rowspan="2"><img class="picture"  src="<?php echo $row['picture']?>" ></td>
+                    <th rowspan="1"><?php echo $row['room_type']?></th>
+                    
                 </tr>
+                <tr><th rowspan="1">RM <?php echo $row['price']?> per day</th></tr>
             <?php
             	
             ?>
@@ -54,33 +55,40 @@
         <?php
         if (isset($_POST['add_cart'])) 
         {
-            $name = $_POST['name'];
+
+            $result = mysqli_query($connect, "SELECT price FROM room_category WHERE room_type = '$rt'");
+            $row = mysqli_fetch_assoc($result);
+            $baseprice = $row['price'];
+            
             $cin = $_POST['check_in'];
             $cout = $_POST['check_out'];
-            $days = $_POST['days'];
+            $days = ['days'];
+            $total = ['total_price'];
             $bdate = $_POST['book_date'];
 
-            if(empty($name) || empty($cin) || empty($cout) || empty($days)) {
+            if(empty($bdate) || empty($cin) || empty($cout) || empty($days)) {
                 ?>
                 <script>
                     alert("Please fill in all fields.");
                 </script>
                 <?php
             } 
-            else if(!preg_match("/^[a-zA-Z ]*$/", $name))
-            {
-                ?>
-                <script>
-                    alert("Please enter your name corretly");
-                </script>
-                <?php
-            }
+           
             else
             {
+
+                $checkInDate = new DateTime($cin);
+                $checkOutDate = new DateTime($cout);
+
+                $dateDifference = $checkOutDate->diff($checkInDate);
+
+                $days = $dateDifference->days;
+
+                $total = $baseprice * $days;
             
             //else insert into database
-            mysqli_query($connect, "INSERT INTO `order` (`name`,booking_date,check_in,check_out,`days`,room_type) 
-            VALUES('$name','$bdate','$cin', '$cout', '$days','$rt')");
+            mysqli_query($connect, "INSERT INTO `order` (booking_date,check_in,check_out,`days`,room_type,total_price) 
+            VALUES('$bdate','$cin', '$cout', '$days','$rt','$total')");
             //need to put '' cause can't calculate
 
                 ?>
@@ -97,11 +105,11 @@
         <br/><br/><br/>
         
         <form name="addnewfrm" method="post" action="">
-            <h1>Guest Information</h1>
+            <h1>Please fill in the order information below</h1>
 
             
-            <p>Name: <input type="text" name="name"></p>
-            <p>Days: <input type="text" name="days"></p>
+            
+            
             <p>booking_date : <input type="date" name="book_date"></p>
             
             <p>Date of Check-In: <input type="date" name="check_in"></p>

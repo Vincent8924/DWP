@@ -36,12 +36,14 @@
         ?>	
                 
         <tr>
-        <td><img class="picture"  src="  <?php echo $row['picture']?>" ></td>
+        <td rowspan="2"><img class="picture"  src="  <?php echo $row['picture']?>" ></td>
             <th><?php echo $row['room_type']?></th>
             
             <th><a href="order.php?buy&room_type=<?php echo $row['room_type']; ?>" ><button>Buy Now</button></a></th>
             
         </tr>
+        <tr> <th>RM<?php echo $row['price']?> per day</th></tr>
+        
         <?php
         
         }		
@@ -52,6 +54,7 @@
     
     
 </table>
+
 
         
         </body>

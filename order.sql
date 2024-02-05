@@ -4,11 +4,10 @@ START TRANSACTION;
 SET time_zone = "+00:00";
 
 CREATE TABLE `order` (
-  `name` varchar(200) NOT NULL,
   `booking_date` DATE NOT NULL,
   `check_in` DATE NOT NULL,
   `check_out` DATE NOT NULL,
   `days` INT NOT NULL,
-  `room_no` INT NOT NULL,
-  `room_type` varchar(100) NOT NULL
+  `room_type` varchar(100) NOT NULL,
+  `total_price` INT NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
