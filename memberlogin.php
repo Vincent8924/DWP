@@ -17,7 +17,7 @@
             {
                 if(password_verify($_POST["password"],$row["userpassword"]))
                 {
-                    echo'<script>alert("Login successful!");window.locatio.href="index.html"</script>;';
+                    echo'<script>alert("Login successful!");window.location .href="index.html"</script>;';
                 }
                 else
                 {
