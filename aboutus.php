@@ -12,23 +12,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-                #line 
-                {
-                    border: 0px;
-                    background-image: url('image/black.png');
-                    background-repeat: repeat-x;
-                    height: 40px;
-                }
-    
-                .choice a
-                {
-                  font-size: 20px;
-                  text-decoration: none; 
-                  color: white; 
-                  margin-left: 50px;
-                  position: relative;
-                  top: 8px; 
-                }
+               
             
                 #about h1{
                     text-align: center;
@@ -145,17 +129,7 @@
         </style>
         </head>
         <body>
-            <img src="image/KuanTan Hotels2.png" style="height: 50px;"/>
-                <br/>
-                <div id="line" class="choice">
-                  <a href="about us.html" >ABOUT US</a>
-                  <a href="room.html" >ROOM</a>
-                  <a href="food.html" >FOOD</a>
-                  <a href="experience.html" >EXPERIENCE</a>
-                  <a href="event.html" >EVENT</a>
-                  <a href="gallery.html" >GALLERY</a>
-                </div></div>
-                    <br/><br/>
+            <?php include("user_menu.php");?>
                     <div class ="About">
                         <div class="title">
                             <h2>ABOUT US</h2>
