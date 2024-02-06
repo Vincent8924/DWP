@@ -1,29 +1,4 @@
-<?php
-include("Vincentdataconnection.php");
-
-if (isset($_POST['login'])) {
-    $email = mysqli_real_escape_string($connect, $_POST["email"]);
-    $password = mysqli_real_escape_string($connect, $_POST["password"]);
-
-    $query = "SELECT * FROM member WHERE UserEmail='$email'";
-    $result = mysqli_query($connect, $query);
-
-    if ($result) {
-        $user = mysqli_fetch_assoc($result);
-
-        if ($user && password_verify($password, $user['UserPassword'])) {
-            echo "Login successful. Welcome!";
-            // 可以将用户信息存储在 session 中等其他处理
-        } else {
-            echo "Incorrect email or password. Please try again.";
-        }
-    } else {
-        echo "Error in query: " . mysqli_error($connect);
-    }
-
-    mysqli_close($connect);
-}
-?>
+<?php include("Vincentdataconnection.php"); ?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,6 +8,33 @@ if (isset($_POST['login'])) {
     <link rel="stylesheet" type="text/css" href="userlogin.css">
 </head>
 <body>
+    <?php
+        if(isset($_POST['login'])) {
+            $email = $_POST["email"];
+            $result = mysqli_query($connect,"SELECT userpassword FROM member WHERE useremail='$email'");
+            $row = mysqli_fetch_assoc($result);
+            if($row)
+            {
+                if(password_verify($_POST["password"],$row["userpassword"]))
+                {
+                    echo'<script>alert("Login successful!");window.locatio.href="index.html"</script>;';
+                }
+                else
+                {
+                    echo"<script>alert('Password invalid!'); history.go(-1);</script>;";
+                }
+                
+                
+            }
+            else
+            {
+                echo"<script>alert('User does not exist!'); history.go(-1);</script>;";
+            }
+
+        }
+
+       
+    ?>
     <div id="form">
         <?php include("Vincentdataconnection.php"); ?>
 
