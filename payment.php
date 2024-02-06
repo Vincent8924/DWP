@@ -127,23 +127,6 @@ if ($error == 0) {
     font-family: 'Poppins', sans-serif;
 }
 
-#line 
-{
-    border: 0px;
-    background-image: url('image/black.png');
-    background-repeat: repeat-x;
-    height: 40px;
-}
-
-.choice a
-{
-  font-size: 20px;
-  text-decoration: none; 
-  color: white; 
-  margin-left: 50px;
-  position: relative;
-  top: 8px; 
-}
 
 .order{
     margin: 0 auto;
@@ -299,17 +282,7 @@ select{
 }
 </style>
     <body>
-    <img src="image/KuanTan Hotels2.png" style="height: 50px;"/>
-        <br/>
-        <div id="line" class="choice">
-          <a href="About us.html" >ABOUT US</a>
-          <a href="room.html" >ROOM</a>
-          <a href="food.html" >FOOD</a>
-          <a href="experience.html" >EXPERIENCE</a>
-          <a href="event.html" >EVENT</a>
-          <a href="Gallery.html" >GALLERY</a>
-        </div></div>
-        <br/><br/>
+    <?php include("user_menu.php");?>
 
         <div class="Payment">
             <div class="title">
@@ -418,7 +391,7 @@ select{
                             </div>                     
                         </div>
                         <div class="button-area">
-                            <input type="submit" name="submit" onclick="return confirmation();" value="SUBMIT" >
+                            <input type="submit" name="submit" value="SUBMIT" onclick="return confirmation();">
                             <p id="success"></p> 
                             <div class="error"><?php if(!empty($msg)){echo $msg;}?></div>                                 
                         </div> 
