@@ -31,7 +31,7 @@
           <th>User's Name</th>
           <th>User's Email</th>
           <th>User's Gender</th>
-          <th>User's Password</th>
+
         </tr>
 
         <?php
@@ -49,9 +49,6 @@
           <td><?php echo $row["UserName"] ?></td>
           <td><?php echo $row["UserLastName"] ?></td>
           <td><?php echo $row["UserEmail"] ?></td>
-          <td><?php echo $row["UserPassword"] ?></td>
-          
-          
         </tr>
         <?php
         
