@@ -5,24 +5,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-#line 
-{
-    border: 0px;
-    background-image: url('image/black.png');
-    background-repeat: repeat-x;
-    height: 40px;
-}
-
-.choice a
-{
-  font-size: 20px;
-  text-decoration: none; 
-  color: white; 
-  margin-left: 50px;
-  position: relative;
-  top: 8px; 
-}
-
 .Contact{
     position: relative;
     width: 100%;
