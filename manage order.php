@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
     <head>
         <meta charset="UTF-8"/>
@@ -12,17 +12,7 @@
     </head>
     <body >
         
-        <img src="KuanTan Hotels2.png" id="logo"/>
-        <br/>
-        <div id="line" class="choice">
-
-          <a href="" >Staff</a>
-          <a href="" >Member</a>   
-          <a href="manage room.html" >Room Status</a>
-          <a href="manage category.html" >Room Category</a>
-          <a href="manage order.html" >Order</a>
-          <a href="sales report.html" >Sales Report</a>
-          
+    <?php include('jkai_admin_menu.php'); ?>
         
         
         

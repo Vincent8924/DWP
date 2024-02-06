@@ -7,21 +7,25 @@
         <link rel="icon" type="image/x-icon" href="image/title logo.ico">
         <style type="text/css">
 
-                .wrapper
-                {
-                    max-width: 1000px;
-                    margin:0 auto;
-                }
-                .wrapper h1{
-                    padding:30px 0;
+            .order{
+                margin: 0 auto;
+    position: relative;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 35px black;
+    padding:30px 40px;
+    border-radius: 10px;
+    background-color:lightblue;
+            }
+
+              
+                .order h1{
+                    font-weight:bold;
                     text-align:center;
-                    text-transform:uppercase;
                 }
 
-                .project
-                {
-                    display:flex;
-                }
+                
 
                 
 
@@ -87,15 +91,32 @@
                     height:100%;
                     
                 }
+
+                #total{
+    text-align:center;
+    font-weight:bold;
+    color:green;
+}
+
+#total a{
+    background-color: green;
+                    color: white;
+                    text-decoration: none;
+                    display: block;
+                    text-align: center;
+                    height: 40px;
+                    line-height: 40px;
+                    font-weight: 900;
+}
         
         </style>
         </head>
     <body>
     <?php include("user_menu.php");?>
-       <div class="wrapper">
        
+    <div class="order">
                 <h1>Shopping Cart</h1>
-                <div class="project">
+                
                        
                 <table>
             <tr>
@@ -111,10 +132,10 @@
             mysqli_select_db($connect,"hotel");
             if (isset($_POST['remove'])) {
                 $roomTypeToRemove = $_POST['room_type'];
-                $query = "DELETE FROM `order` WHERE room_type = '$roomTypeToRemove'";
+                $query = "DELETE FROM order WHERE room_type = '$roomTypeToRemove'";
                 mysqli_query($connect, $query);
             }
-			$result = mysqli_query($connect, "SELECT * FROM `order`");
+			$result = mysqli_query($connect, "SELECT * FROM order");
             $totalPrice = 0;	
 	         while($row = mysqli_fetch_assoc($result))
 				{
@@ -133,27 +154,29 @@
                 <button type="submit" name="remove" onclick="return confirmation();">REMOVE</button>
             </form></td>
 				</tr>
-                </table> 
+                
                 <?php
 }
 
 
 if ($totalPrice > 0) {
     ?>
-    <div class="right-bar">
-        <p><span>Total</span>RM <?php echo number_format($totalPrice); ?></p>
+    </table> 
+    <div id="total">
+    <p>Total: RM <?php echo number_format($totalPrice);?></p>
         <a href="payment.php">Checkout</a>
-    </div>
     <?php
 } else {
     echo "<p>Your shopping cart is empty. Add items to your cart before proceeding to checkout.</p>";
 }
 ?>
+
+</div>
+
                  
           
                 </div>                
-                </div>
-            </div>
+            
             <script>
             function confirmation()
 {

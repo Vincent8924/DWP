@@ -1,4 +1,4 @@
-<?php include("Vincentdataconnection.php"); ?>
+<?php include("dataconnection.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,17 +9,7 @@
 </head>
 <body>
 
-  <img src="KuanTan Hotels2.png" id="logo"/>
-        <br/>
-        <div id="line" class="choice">
-          <a href="admindashboard.html" >Dashboard</a>
-          <a href="userlist.html" class="nowpage">Member</a>
-          <a href="adminlist.html" >Admin</a>
-          <a href="manage order.html" >Order</a>   
-          <a href="manage room.html" >Room Status</a>   
-          <a href="manage order.html" >Room Category</a>
-          <a href="sales report.html" >Sales Report</a>    
-    </div>
+<?php include('jkai_admin_menu.php'); ?>
 
   <div class="container">
     <h1>Member List</h1>

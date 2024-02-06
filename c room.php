@@ -10,16 +10,7 @@
     </head>
     <body>
 
-        <img src="KuanTan Hotels2.png" id="logo"/>
-        <br/>
-        <div id="line" class="choice">
-
-            <a href="about us.html" >ABOUT US</a>
-            <a href="room list.php"  class="nowpage">ROOM</a>   
-            <a href="food.html" >FOOD</a>
-            <a href="experience.html" >EXPERIENCE</a>
-            <a href="event.html" >EVENT</a>
-            <a href="gallery.html" >GALLERY</a>
+    <?php include('jkai_menu.php'); ?>
             
           
           
