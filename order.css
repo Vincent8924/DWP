@@ -1,9 +1,4 @@
-.picture
-{
-    
-    width: 500px; /* 设置宽度为父容器的50% */
-      height: auto; /* 让高度按比例自动调整 */
-}
+
 
 .container img {
     display: block;
@@ -49,22 +44,22 @@ body
 
 
 
-#wupx
+.wupx
 {
     font-size: 50px;
 }
 
-#shipx
+.shipx
 {
     font-size: 40px;
 }
 
-#sanpx
+.sanpx
 {
     font-size: 30px;
 }
 
-#erpx
+.erpx
 {
     font-size: 20px;
 }
@@ -145,4 +140,41 @@ a.nowpage
         
         cursor: pointer;
       
+}
+
+.formBox{
+    position: relative;
+    width: 1200px;
+    column-width: auto;
+    
+    box-shadow: 0 2px 5px black;
+    padding:30px 40px;
+    border-radius: 10px;
+}
+
+.picture
+{
+
+    display: block;
+    margin-left: 220px;
+    height: 450px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+button
+{
+    
+        
+        width: 100px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        background-color: #000;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+      
+
 }

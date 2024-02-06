@@ -21,10 +21,11 @@
         <a href="experience.html">EXPERIENCE</a>
         <a href="event.html">EVENT</a>
         <a href="gallery.html">GALLERY</a>
-        <br/><br/><br/>
-        <p><h1>Add your order into cart</h1></p>
+        <br/><br/><br/> <br/><br/><br/>
+        <div class="wupx"><u>Add your order into cart</u></div>
+        
 
-        <table border="0" width="650px">
+        
             <?php
             $row = [];
             if(isset($_GET["buy"])) {
@@ -38,15 +39,47 @@
             $result = mysqli_query($connect, "SELECT * FROM room_category");	
             
             ?>	
-                <tr>
-                    <td rowspan="2"><img class="picture"  src="<?php echo $row['picture']?>" ></td>
-                    <th rowspan="1"><?php echo $row['room_type']?></th>
+
+<table border="0"   class="formBox">
+        <tr>
+
+        
+            <td >
+                <span>
                     
-                </tr>
-                <tr><th rowspan="1">RM <?php echo $row['price']?> per day</th></tr>
-            <?php
-            	
-            ?>
+                        <img class="picture"  src="<?php echo $row['picture']?>">
+
+                </span>
+                
+            </td>
+            
+        </tr>
+        <tr>   
+            <td rowspan="1">
+                
+            
+           
+                <div class="shipx"><?php echo $row['room_type']?></div><br/>
+                <div class="erpx" ><?php echo $row['comment']?> <br/><br/><br/>
+                
+                <b><i>Price : RM<?php echo $row['price']?> per day</i></b></div>
+                
+            </td>
+       
+            
+            
+        </tr>
+        <br/><br/><br/><br/>
+      
+        
+        <?php
+        
+        		
+    
+    ?>
+
+
+
         </table>
 
       
@@ -108,16 +141,19 @@
         
         <form name="addnewfrm" method="post" action="">
             <h1>Please fill in the order information below</h1>
+            <br/><hr/><br/><br/><br/>
 
             
             
+            <div  class="formbox">
+            <p class="erpx">Booking Date : <input type="date" name="book_date"></p>
             
-            <p>booking_date : <input type="date" name="book_date"></p>
-            
-            <p>Date of Check-In: <input type="date" name="check_in"></p>
-            <p>Date of Check-Out: <input type="date" name="check_out"></p>
-            <input type="submit" name="add_cart" value="Order has been added to cart">
+            <p class="erpx">Date of Check-In: <input type="date" name="check_in"></p>
+            <p class="erpx">Date of Check-Out: <input type="date" name="check_out"></p>
+            <br/><hr/><br/><br/><br/>
+            <button type="submit" name="add_cart" value="Add to cart">Add to cart</button>
+            </div>
         </form>
-    </div>
+        <br/><br/><br/><br/>
 </body>
 </html>
