@@ -59,7 +59,7 @@
         <br/><p><hr/></p><br/>
         <div  id="sanpx" >Luxurious furniture with a modern twist.</div>
         <br/>
-        <div  id="erpx" >The Presidential Suite is the most spectacular lodging option available in Beijing at the Kerry Hotel. The suite is perfect for business meetings or elegant social events. With its chic decor, it exudes the perfect amount of luxury and elegance.</div>
+        <div  id="erpx" >The Presidential Suite is the most spectacular lodging option available in KuanTan at the KuanTan Hotel. The suite is perfect for business meetings or elegant social events. With its chic decor, it exudes the perfect amount of luxury and elegance.</div>
         
 
         <br/><br/>

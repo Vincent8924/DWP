@@ -61,7 +61,7 @@
             <ul id="erpx">
                 <li>There's 52 sqm / 560 sqf of space available each room.</li>
                 <br/>
-                <li>expansive vistas of Beijing's urban landscape.</li>
+                <li>expansive vistas of KuanTan's urban landscape.</li>
                 <br/>
                 <li>A marble-topped bathroom featuring:
                     <br/><br/>
