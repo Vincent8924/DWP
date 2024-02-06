@@ -10,7 +10,7 @@
     font-size: 20px;
     text-decoration: none;
     color: white;
-    margin-left: 100px;
+    margin-left: 50px;
     position: relative;
     top: 8px;
     display: inline-block; 
