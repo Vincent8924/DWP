@@ -1,0 +1,90 @@
+body
+{
+    background-image: url(image/background3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#login
+{
+
+    
+    margin:0 auto;	
+    margin-top: 60px;
+    
+    width:600px;
+    height: 400px; 
+}
+ 
+#logo
+{
+    position: relative;
+    left:  150px;
+    top:40px ;
+    
+    width: 300px;
+    
+	
+	
+}
+
+#login-form
+{
+	
+	text-align:center;
+   
+}
+ 
+#login-form input[type=text], [type=password]
+{
+	width:250px;
+	border-radius:5px;
+	border:1px solid #ddd;
+	height:25px;
+	padding:5px 10px 5px 40px
+}
+ 
+#login-form input[type=text]
+{
+	background-image:url(image/user.png);
+	background-repeat:no-repeat;
+	background-position:10px 10px;
+}
+ 
+#login-form input[type=password]
+{
+	background-image:url(image/key.png);
+	background-repeat:no-repeat;
+	background-position:10px 10px;
+}
+ 
+#login-form input[type=submit]
+{
+	background-color:black;
+	width:300px;
+	padding:10px;
+	border:0px;
+	color:white;
+	font-weight:bold
+}
+ 
+#login-form input[type=submit]:hover
+{
+	background-color:gray;
+	cursor:pointer
+}
+ 
+#login-form p a
+{
+    color: rgb(5, 171, 231);
+	text-decoration:none;
+	text-align:center;
+	font-family:Arial Narrow;
+	font-size:0.8em;
+}
+ 
+#login-form p a:hover
+{
+	font-style:italic;
+	color:red;
+}

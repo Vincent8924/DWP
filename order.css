@@ -1,0 +1,180 @@
+
+
+.container img {
+    display: block;
+    margin-left: 220px;
+    height: 400px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text
+{
+    color: #000;
+}
+
+
+.imgdesign
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.textdesign
+{
+    display: flex;
+    justify-content: center; /* 仅在水平方向上居中 */
+}
+
+body
+{
+    
+    width: 90%; /* 设置容器宽度 */
+    margin: 0 auto; /* 将左右边距设置为自动以实现居中 */
+    
+}
+
+#logo
+{
+    height: 50px;
+}
+
+
+
+.wupx
+{
+    font-size: 50px;
+}
+
+.shipx
+{
+    font-size: 40px;
+}
+
+.sanpx
+{
+    font-size: 30px;
+}
+
+.erpx
+{
+    font-size: 20px;
+}
+
+#line 
+{
+    border: 0px;
+     /* 设置背景图片 */
+    background-image: url('线条.png');
+    /* 设置背景图片在水平方向上重复 */
+    background-repeat: repeat-x;
+    height: 40px;
+}
+
+
+
+
+
+    /* 添加 CSS 样式来隐藏除了.active状态的图片 */
+#slideshow img:not(.active) 
+{
+    display: none;
+}
+
+.choice a
+{
+  font-size: 20px;
+  text-decoration: none; /* 移除下划线 */
+  color: white; /* 使用父元素的颜色 */
+  margin-left: 50px;
+  position: relative;
+  top: 8px; /* 使用 position 和 top 调整位置 */
+}
+
+
+
+
+.m_member table
+{
+    border: 10;
+    width: 100%;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.m_member th{
+    background-color: #eeeeee;
+    text-align: center;
+}
+
+.m_member td
+{
+    text-align: center;
+    padding: 10px;
+}
+
+a.nowpage
+{
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px; 
+}
+
+
+
+#submit
+{
+    
+        width: 100px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        
+        
+        
+        cursor: pointer;
+      
+}
+
+.formBox{
+    position: relative;
+    width: 1200px;
+    column-width: auto;
+    
+    box-shadow: 0 2px 5px black;
+    padding:30px 40px;
+    border-radius: 10px;
+}
+
+.picture
+{
+
+    display: block;
+    margin-left: 220px;
+    height: 450px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+button
+{
+    
+        
+        width: 100px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        background-color: #000;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+      
+
+}

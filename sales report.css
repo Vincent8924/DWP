@@ -1,0 +1,70 @@
+table {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #ccc;
+  
+  margin-top: 10px    ;
+  border: 10;
+  width: 60%;
+
+  }
+ 
+  
+  body
+  {
+      
+      width: 90%; /* 设置容器宽度 */
+      margin: 0 auto; /* 将左右边距设置为自动以实现居中 */
+      
+  }
+
+  #add
+  {
+      float: right;
+  }
+
+  thead {
+  background-color: #eeeeee;
+  text-align:left;
+  }
+
+  td {
+  padding: 10px;
+  text-align: left;
+  }
+  
+ 
+  #logo
+{
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+#line 
+{
+  border: 0px;
+   /* 设置背景图片 */
+  background-image: url('线条.png');
+  /* 设置背景图片在水平方向上重复 */
+  background-repeat: repeat-x;
+  height: 40px;
+}
+
+.choice a
+{
+font-size: 20px;
+text-decoration: none; /* 移除下划线 */
+color: white; /* 使用父元素的颜色 */
+margin-left: 50px;
+position: relative;
+top: 8px; /* 使用 position 和 top 调整位置 */
+}
+button {
+  width: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}

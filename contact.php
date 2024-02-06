@@ -78,17 +78,7 @@
 ?>
     <body>
 
-        <img src="image/KuanTan Hotels2.png" style="height: 50px;"/>
-        <br/>
-        <div id="line" class="choice">
-          <a href="About us.html" >ABOUT US</a>
-          <a href="room.html" >ROOM</a>
-          <a href="food.html" >FOOD</a>
-          <a href="experience.html" >EXPERIENCE</a>
-          <a href="event.html" >EVENT</a>
-          <a href="Gallery.html" >GALLERY</a>
-        </div></div>
-                    <br/><br/>
+    <?php include("user_menu.php");?>
                     <div class="Contact">
                         <div class="title">
                              <h2>CONTACT US</h2>
@@ -139,7 +129,7 @@
 
                                         <div class="row100">
                                         <div class="button-area">
-                                        <input type="submit" name="submit" value="SUBMIT">
+                                        <input type="submit" name="submit" onclick="return confirmation();" value="SUBMIT">
                                         <p id="success"></p> 
                                         <div class="error"><?php if(!empty($msg)){echo $msg;}?></div>                                 
                         </div>                                           
@@ -178,5 +168,12 @@
                                 </div>   
     </body>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>               
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>     
+<script>
+function confirmation()
+{
+	answer = confirm("Do you want to submit your contact?");
+	return answer;
+}
+    </script>          
 </html>

@@ -247,11 +247,11 @@ select{
                         <br/>
                         <select class ="" name="room_type" required>
                             <option value="" selected hidden>Select Your Room Type you need to rate and comment</option>
-                            <option value="room a">ROOM A</option>                       
-                            <option value="room b">ROOM B</option> 
-                            <option value="room c">ROOM C</option> 
-                            <option value="room d">ROOM D</option> 
-                            <option value="room e">ROOM E</option> 
+                            <option value="Presidential Suite">ROOM A</option>                       
+                            <option value="Specialty Suite">ROOM B</option> 
+                            <option value="Executive Suite">ROOM C</option> 
+                            <option value="Club Premier Room">ROOM D</option> 
+                            <option value="Deluxe Rooms">ROOM E</option> 
                         </select>
                         <br/>
                      
@@ -274,7 +274,7 @@ select{
                         </div>
                         <div class="row100">
                                 <div class="button-area">
-                                <input type="submit" name="submit" value="SUBMIT">
+                                <input type="submit" name="submit" onclick="return confirmation();" value="SUBMIT" >
                                 <p id="success"></p>                                  
                                 </div>                                           
                         </div>
@@ -319,6 +319,11 @@ function submitRating() {
     } else {
         alert('Please select a rating before submitting.');
     }
+}
+function confirmation()
+{
+	answer = confirm("Do you want to submit your comment?");
+	return answer;
 }
 
 </script>
