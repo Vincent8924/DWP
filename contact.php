@@ -78,17 +78,7 @@
 ?>
     <body>
 
-        <img src="image/KuanTan Hotels2.png" style="height: 50px;"/>
-        <br/>
-        <div id="line" class="choice">
-          <a href="About us.html" >ABOUT US</a>
-          <a href="room.html" >ROOM</a>
-          <a href="food.html" >FOOD</a>
-          <a href="experience.html" >EXPERIENCE</a>
-          <a href="event.html" >EVENT</a>
-          <a href="Gallery.html" >GALLERY</a>
-        </div></div>
-                    <br/><br/>
+    <?php include("user_menu.php");?>
                     <div class="Contact">
                         <div class="title">
                              <h2>CONTACT US</h2>
