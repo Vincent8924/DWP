@@ -5,21 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="adminlist.css">
-  <title>Manger Member | KuanTan Hotels</title>
+  <title>Manger Admin | KuanTan Hotels</title>
 </head>
 <body>
 
-    <img src="KuanTan Hotels2.png" id="logo"/>
-            <br/>
-            <div id="line" class="choice">
-              <a href="admindashboard.html" >Dashboard</a>
-              <a href="userlist.html" >Member</a>
-              <a href="adminlist.html"class="nowpage" >Admin</a>
-              <a href="manage order.html" >Order</a>   
-              <a href="manage room.html" >Room Status</a>   
-              <a href="manage order.html" >Room Category</a>
-              <a href="sales report.html" >Sales Report</a>    
-        </div>
+  <?php include("jkai_admin_menu.php"); ?>
+  <br/><br/>
 
   <div class="container">
     <h1>Admin List</h1>
@@ -60,5 +51,10 @@
         
         ?>
     </Table>
+
+    <button><span>Edit</span></button>
+    
+
+    </div>
       
 
