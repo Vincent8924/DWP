@@ -77,43 +77,47 @@
         $card_CVV_error ="Invalid Card CVV";
     }
    
-    
-
-    // ... Your existing code ...
-
-if ($error == 0) {
-    // Copy data from the order table to user_order table
-    $copy_query = mysqli_query($connect, "INSERT INTO user_order (first_name, last_name, room_type, booking_date, check_in, check_out, days, method, price) 
-                                          SELECT '$first_name', '$last_name', room_type, booking_date, check_in, check_out, days, '', 0 FROM `order`");
-    
-    if ($copy_query) {
-        // Calculate the total price
-        $result = mysqli_query($connect, "SELECT SUM(total_price) AS total_price FROM `order`");
-        $row = mysqli_fetch_assoc($result);
-        $totalPrice = $row['total_price'];
-
-        // Update the method and price in user_order based on the form submission
-        $update_query = mysqli_query($connect, "UPDATE user_order 
-                                               SET method = '$method', price = $totalPrice
-                                               WHERE first_name = '$first_name' AND last_name = '$last_name'");
+    if ($error == 0) {
+        // Copy data from the order table to user_order table
+        $result = mysqli_query($connect, "SELECT * FROM order");
         
-        if ($update_query) {
-            $delete_query = mysqli_query($connect, "DELETE FROM `order`");
-            if ($delete_query) {
-                $msg = "Your order has been processed successfully";
-            } else {
-                $msg = "Failed to delete";
+        while ($row = mysqli_fetch_assoc($result)) {
+            $room_type = $row['room_type'];
+            $booking_date = $row['booking_date'];
+            $check_in = $row['check_in'];
+            $check_out = $row['check_out'];
+            $days = $row['days'];
+            $total_price = $row['total_price'];
+    
+            // Insert each order into user_order table
+            $insert_query = mysqli_query($connect, "INSERT INTO user_order (first_name, last_name, room_type, booking_date, check_in, check_out, days, method, price) 
+                                                    VALUES ('$first_name', '$last_name', '$room_type', '$booking_date', '$check_in', '$check_out', '$days', '', $total_price)");
+            
+            if (!$insert_query) {
+                $error = 1;
+                $msg = "Failed to insert order";
+                break; 
             }
-        } else {
-            $msg = "Failed to update";
+        }
+    
+        if ($error == 0) {
+            $update_query = mysqli_query($connect, "UPDATE user_order 
+                                                    SET method = '$method'
+                                                    WHERE first_name = '$first_name' AND last_name = '$last_name'");
+            
+            if ($update_query) {
+                $msg = "Your orders have been processed successfully";
+                $delete_query = mysqli_query($connect, "DELETE FROM order");
+                if (!$delete_query) {
+                    $msg .= ", but failed to delete orders";
+                }
+            } else {
+                $msg = "Failed to update method";
+            }
         }
     } else {
-        $msg = "Failed to copy data";
+        $msg = "Please fill all fields";
     }
-} else {
-    $msg = "Please fill all fields";
-}
-
 
 }
     
@@ -305,7 +309,7 @@ select{
 			</tr>
             <?php 
                 mysqli_select_db($connect,"hotel");
-                $result = mysqli_query($connect, "SELECT * FROM `order`");
+                $result = mysqli_query($connect, "SELECT * FROM order");
                 $totalPrice = 0;	
                 while($row = mysqli_fetch_assoc($result))
                    {
@@ -424,4 +428,4 @@ select{
 }
     </script>
     </body>
-    </html>  
+    </html>

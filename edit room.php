@@ -18,7 +18,13 @@
         
         
         
-        
+    <?php
+		    if(isset($_REQUEST["rn"]))
+			{
+			$id = $_REQUEST["rn"];
+ 
+			}
+		?>
  
         <br/><br/>
 
@@ -40,7 +46,7 @@
                 <tbody>
                   <tr>
                     
-                    <th><input type="text" class="field" placeholder="Room No" name="room_no"></th>
+                    <th><?php echo $_REQUEST['rn']?></th>
                     <th>
                         <select class="field" name="room_type">
                             <option value="Presidential Suite">Presidential Suite</option>
@@ -65,7 +71,7 @@
                 </tbody>
                 </table>
                 <br/>
-                <button id="add" name="add_room">Add Room</button>
+                <button id="add" name="add_room">Edit Room</button>
                 <br/><br/>
             </form>
 
@@ -73,12 +79,12 @@
      
      if (isset($_POST['add_room']))
      {
-         $rn = $_POST['room_no'];
+         $rn = $_REQUEST['rn'];
          $rt = $_POST['room_type'];
          $rs = $_POST['room_status'];
 
         
-         if(empty($rn) || empty($rs) || empty($rt)) {
+         if(empty($rs) || empty($rt)) {
              ?>
              <script>
                  alert("Please fill in all fields.");
@@ -91,8 +97,12 @@
          {
 
          
-         mysqli_query($connect, "INSERT INTO `room_status` (room_no,room_type,room_status) 
-         VALUES('$rn','$rt','$rs')");
+            mysqli_query($connect, "
+            UPDATE `room_status` 
+            SET
+            room_type = '$rt',
+            room_status = '$rs'
+            WHERE room_no = '$rn'");
          
 
              ?>
@@ -119,7 +129,7 @@
                 
                 <th>Room Type</th>
                 <th>Status</th>
-                <th>Action</th>
+               
               </tr>
             
               <?php
@@ -135,17 +145,7 @@
               <td><?php echo $row['room_no']?></td>
               <td><?php echo $row['room_type']?></td>
               <td><?php echo $row['room_status']?></td>
-              <td>
-                  <form method="post" >
-                  
-                  <button><a href="edit room.php?rn&rn=<?php echo $row['room_no'];?>" class="white">Edit</a></button>
-                     
-                     <button type="submit" name="delete_room">Delete</button>
-                      
-                      <input type="hidden" name="delete" value="<?php echo $row['room_no']; ?>">
-                      
-                  </form>
-              </td>
+              
           </tr>
         <?php
         }
@@ -153,22 +153,7 @@
           </table>
 
 
-          <?php
-                if (isset($_POST['delete_room'])) 
-                {
-                    $delete = $_POST['delete'];
-                    mysqli_query($connect, "DELETE FROM room_status WHERE room_no = '$delete'");
-                
-                ?>
-                
-                <script type="text/javascript">
-                    alert("Record has been deleted!");
-                    window.location.href = "manage room.php";
-                </script>
-
-            <?php
-                }
-            ?>
+         
         
     </body>
 

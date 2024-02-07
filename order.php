@@ -26,6 +26,8 @@
         
 
         
+
+
             <?php
             $row = [];
             if(isset($_GET["buy"])) {
@@ -40,7 +42,7 @@
             
             ?>	
 
-<table border="0"   class="formBox">
+        <table border="0"   class="formBox">
         <tr>
 
         
@@ -120,7 +122,7 @@
                 $total = $baseprice * $days;
             
             //else insert into database
-            mysqli_query($connect, "INSERT INTO `order` (booking_date,check_in,check_out,`days`,room_type,total_price) 
+            mysqli_query($connect, "INSERT INTO `user_order` (booking_date,check_in,check_out,`days`,room_type,price) 
             VALUES('$bdate','$cin', '$cout', '$days','$rt','$total')");
             //need to put '' cause can't calculate
 
