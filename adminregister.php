@@ -21,11 +21,13 @@
             $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
             mysqli_query($connect,"INSERT INTO admin(adminname, adminlastname, adminage, adminemail, admincontactnum, adminpassword) VALUES ('$firstname','$lastname','$age','$email','$contactnum','$password')");
             
+
+
              ?>
             
             <script type="text/javascript">
                     alert("Registration successful. You can now proceed to log in.");
-                    window.location.href = 'memberlogin.php';
+                    window.location.href = 'adminlogin.php';
                 </script>
             <?php
     
@@ -44,6 +46,7 @@
                 <br/><br/>
                 <div id="reg-form">
                     <form name="regfrm">
+
 
                         <p><input type="text" name="firstname" placeholder="Please Enter your firstname" required/></p>
                       

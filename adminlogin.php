@@ -12,8 +12,8 @@
 
         <?php
         if(isset($_POST['login'])) {
-            $ID = $_POST["id"];
-            $result = mysqli_query($connect,"SELECT adminpassword FROM admin WHERE adminID='$ID'");
+            $email = $_POST["email"];
+            $result = mysqli_query($connect,"SELECT adminpassword FROM admin WHERE adminemail='$email'");
             $row = mysqli_fetch_assoc($result);
             if($row)
             {
@@ -45,8 +45,8 @@
                 <br/><br/>
                 <div id="login-form">
                     <form name="loginfrm">
-                        <p><input type="text" name="id" placeholder="Please Enter your ID"/></p>
-                        <p><input type="password" name="password" placeholder="Please Enter your Password"/></p>
+                        <p><input type="text" name="email" placeholder="Please Enter your Email" required/></p>
+                        <p><input type="password" name="password" placeholder="Please Enter your Password" required/></p>
                         <button type="submit" name="login">Login</button>
                     </form>
                     

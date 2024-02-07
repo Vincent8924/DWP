@@ -1,4 +1,4 @@
-<?php include("dataconnection.php"); ?>
+<?php include("Vincentdataconnection.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +9,17 @@
 </head>
 <body>
 
-<?php include('jkai_admin_menu.php'); ?>
+    <img src="KuanTan Hotels2.png" id="logo"/>
+            <br/>
+            <div id="line" class="choice">
+              <a href="admindashboard.html" >Dashboard</a>
+              <a href="userlist.html" class="nowpage">Member</a>
+              <a href="adminlist.html" >Admin</a>
+              <a href="manage order.html" >Order</a>   
+              <a href="manage room.html" >Room Status</a>   
+              <a href="manage order.html" >Room Category</a>
+              <a href="sales report.html" >Sales Report</a>    
+        </div>
 
   <div class="container">
     <h1>Member List</h1>
@@ -18,18 +28,21 @@
       
         <tr>
           <th>User's ID</th>
-          <th>User's Name</th>
+          <th>User's First Name</th>
+          <th>User's Last Name</th>
           <th>User's Email</th>
-          <th>User's Gender</th>
 
         </tr>
 
         <?php
 			
-        $result = mysqli_query($connect, "SELECT * FROM member");	//$ result
-        $count = mysqli_num_rows($result);//used to count number of rows
+        $result = mysqli_query($connect, "SELECT * FROM member");	
+        if (!$result) {
+          die("Query failed: " . mysqli_error($connect));
+        }
+        $count = mysqli_num_rows($result);
         
-        while($row = mysqli_fetch_assoc($result))//$ row is based on each row in the table
+        while($row = mysqli_fetch_assoc($result))
         {
         
         ?>			
