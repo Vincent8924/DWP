@@ -1,6 +1,7 @@
 #logo
 {
     height: 50px;
+
 }
 
 .choice a
@@ -20,32 +21,17 @@
     height: 40px;
 }
 
-a.nowpage
-{
-    background-color: white;
-    color: black;
-    padding: 5px 10px;
-    border-radius: 5px; 
-}
-
-.chart
-{
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
 .grid
 {
     max-width: 1000px;
-    margin: 20px auto;
+    margin: auto;
+    margin-top: 100px;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     align-items: center;
     text-align: center;
+    
 }
 
 .grid_container 
@@ -53,26 +39,52 @@ a.nowpage
     display: inline-block;
     width: 100px;
     height: 100px;
-    margin: 20px;
+    margin:auto;
+    margin-left: 20px;
+    margin-right: 20px;
     padding: 20px;
     background-color: rgba(136, 136, 136, 0.767);
     border: rgba(0, 0, 0, 0.849) solid ;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
   
-  
-.grid_item:hover 
-{
-    background-color: #d0d0d0;
-}
+
 
 body
 {
     
-    width: 90%; /* 设置容器宽度 */
-    margin: 0 auto; /* 将左右边距设置为自动以实现居中 */
+    width: 90%;
+    margin: 0 auto;
     
+}
+a
+{
+    color: black;
+    
+}
+
+#order:hover{
+    background-image: url(orderlogo.png);
+    background-size: 100% 100%;
+    color: transparent;
+}
+#room:hover{
+    background-image: url(roomlogo.png);
+    background-size: 100% 100%;
+    color: transparent;
+}
+#admin:hover{
+    background-image: url(adminlogo.jpg);
+    background-size: 100% 100%;
+    color: transparent;
 }
 #member:hover{
     background-image: url(memberlogo.png);
+    background-size: 100% 100%;
+    color: transparent;
+}
+#sales:hover{
+    background-image: url(saleslogo.png);
+    background-size: 100% 100%;
+    color: transparent;
 }

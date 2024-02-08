@@ -60,47 +60,77 @@
             echo"torder error";
         }
     ?>
+    <?php
+        $result = mysqli_query($connect, "SELECT SUM(price) AS tsales FROM user_order;");
+        if($result)
+        {
+            $row = mysqli_fetch_assoc($result);
+            $tsales =  $row["tsales"];
+        }
+        else
+        {
+            echo"tsales error";
+        }
+    ?>
         <div class="grid">
-            
-            <div id="member" class="grid_container ">
-                <img src="memberlogo.jpn" alt="member">
-                <h2>
-                    <?php echo $tmember?>
-                </h2>
-                <a href="member.php" id="member">
+
+            <a href="member.php">
+            <div id="member"class="grid_container">
+                    <h2>
+                        <?php echo $tmember?>
+                    </h2>
+                    
                     <p>
-                        member
+                        MEMBER
                     </p>
-                </a>
-                
-            </div>
-            <div id="admin" class="grid_container ">
+                    
+                    
+                </div>
+            </a>
+            <a href="adminlist.php">
+            <div  id="admin"class="grid_container">
                 <h2>
                     <?php echo $tadmin?>
                 </h2>
                 <p>
-                    admin
+                    ADMIN
                 </p>
             </div>
-            <div id="room" class="grid_container ">
-                <h2>
-                    <?php echo $troom?>
-                </h2>
-                <p>
-                    Room
-                </p>
-            </div>
-            <div id="order"class="grid_container ">
-                <h2>
-                    <?php echo $torder?>
-                </h2>
-                <p>
-                    Order
-                </p>
-            </div>
+            </a>
+            <a href="manage category.php">
+                <div id="room" class="grid_container">
+                    <h2>
+                        <?php echo $troom?>
+                    </h2>
+                    <p>
+                        ROOM
+                    </p>
+                </div>
+            </a>
+            <a href="manage order.php">
+                <div id="order"class="grid_container">
+                    <h2>
+                        <?php echo $torder?>
+                    </h2>
+                    <p>
+                        ORDER
+                    </p>
+                </div>
+            </a>
+            <a href="sale report.php">
+                <div id="sales"class="grid_container">
+                    <h2>
+                        RM <?php echo $tsales ?>
+                    </h2>
+                    <p>
+                        SALES
+                    </p>
+                </div>
+            </a>
+            
         </div>
 
-
+        
         
         
         
