@@ -1,3 +1,4 @@
+<?php include('dataconnection.php');?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,13 +11,61 @@
     </head>
     <?php include('jkai_admin_menu.php'); ?>
     
-        
+    <?php
+        $result = mysqli_query($connect, "SELECT count(*) AS tmember FROM member;");
+        if($result)
+        {
+            $row = mysqli_fetch_assoc($result);
+            $tmember = $row["tmember"];
+        }
+        else
+        {
+            echo"tmember error";
+        }
+    ?>
+    <?php
+        $result = mysqli_query($connect, "SELECT count(*) AS tadmin FROM admin;");
+        if($result)
+        {
+            $row = mysqli_fetch_assoc($result);
+            $tadmin = $row["tadmin"];
+        }
+        else
+        {
+            echo"tadmin error";
+        }
+    ?>
+    <?php
+        $result = mysqli_query($connect, "SELECT SUM(room_quantity) AS troom FROM room_category;");
+        if($result)
+        {
+            $row = mysqli_fetch_assoc($result);
+            $troom = $row["troom"];
+        }
+        else
+        {
+            echo"troom error";
+        }
+    ?>
+
+    <?php
+        $result = mysqli_query($connect, "SELECT count(*)AS torder FROM user_order;");
+        if($result)
+        {
+            $row = mysqli_fetch_assoc($result);
+            $torder = $row["torder"];
+        }
+        else
+        {
+            echo"torder error";
+        }
+    ?>
         
 
         <div class="grid">
             <div class="grid_container ">
                 <h2>
-                    20
+                    <?php echo $tmember?>
                 </h2>
                 <p>
                     member
@@ -24,7 +73,7 @@
             </div>
             <div class="grid_container ">
                 <h2>
-                    20
+                    <?php echo $tadmin?>
                 </h2>
                 <p>
                     admin
@@ -32,7 +81,7 @@
             </div>
             <div class="grid_container ">
                 <h2>
-                    25
+                    <?php echo $troom?>
                 </h2>
                 <p>
                     Room
@@ -40,7 +89,7 @@
             </div>
             <div class="grid_container ">
                 <h2>
-                    5
+                    <?php echo $torder?>
                 </h2>
                 <p>
                     Order
