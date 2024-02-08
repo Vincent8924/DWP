@@ -16,17 +16,16 @@
             $firstname = $_POST["firstname"];
             $lastname = $_POST["lastname"];
             $email = $_POST["email"];
-            $password = $_POST["password"];
-            $confirmPassword = $_POST["confirmPassword"];
-
-            
+            $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
             mysqli_query($connect,"INSERT INTO member(UserName, UserLastName, UserEmail, UserPassword) VALUES ('$firstname', '$lastname', '$email', '$password')");
-	
-            if (mysqli_error($connect)) {
-                echo "MySQL Error: " . mysqli_error($connect);
-            } else {
-                echo "Saved";
-            }
+            
+             ?>
+            
+            <script type="text/javascript">
+                    alert("Registration successful. You can now proceed to log in.");
+                    window.location.href = 'memberlogin.php';
+                </script>
+            <?php
     //        $errors = array();
         }
     /*        if(empty($firstname) OR empty($lastname) OR empty($email) OR empty($password) OR empty($confirmPassword))
@@ -89,7 +88,7 @@
         </div>
         
 
-        <button type="submit" name="summit">Sign Up</button>
+        <button type="submit" name="submit">Sign Up</button>
         <p><a href="memberlogin.php">Already have an account?</a></p>
     </div>
     

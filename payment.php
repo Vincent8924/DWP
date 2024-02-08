@@ -78,8 +78,8 @@
     }
    
     if ($error == 0) {
-        // Copy data from the order table to user_order table
-        $result = mysqli_query($connect, "SELECT * FROM order");
+
+        $result = mysqli_query($connect, "SELECT * FROM `order`");
         
         while ($row = mysqli_fetch_assoc($result)) {
             $room_type = $row['room_type'];
@@ -107,7 +107,7 @@
             
             if ($update_query) {
                 $msg = "Your orders have been processed successfully";
-                $delete_query = mysqli_query($connect, "DELETE FROM order");
+                $delete_query = mysqli_query($connect, "DELETE FROM `order`");
                 if (!$delete_query) {
                     $msg .= ", but failed to delete orders";
                 }
@@ -131,7 +131,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
+body
+    {
+        
+        width: 90%; /* 设置容器宽度 */
+        margin: 0 auto; /* 将左右边距设置为自动以实现居中 */
+        
+    }   
 .order{
     margin: 0 auto;
     position: relative;
@@ -309,7 +315,7 @@ select{
 			</tr>
             <?php 
                 mysqli_select_db($connect,"hotel");
-                $result = mysqli_query($connect, "SELECT * FROM order");
+                $result = mysqli_query($connect, "SELECT * FROM `order`");
                 $totalPrice = 0;	
                 while($row = mysqli_fetch_assoc($result))
                    {
@@ -428,4 +434,4 @@ select{
 }
     </script>
     </body>
-    </html>
+    </html>  

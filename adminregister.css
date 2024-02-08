@@ -1,0 +1,82 @@
+body
+{
+    background-image: url(image/background3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#reg
+{
+
+    
+    margin:0 auto;	
+    margin-top: 60px;
+    
+    width:600px;
+    height: 400px; 
+}
+ 
+#logo
+{
+    position: relative;
+    left:  150px;
+    top:40px ;
+    
+    width: 300px;
+    
+	
+	
+}
+
+#reg-form
+{
+	
+	text-align:center;
+   
+}
+ 
+#reg-form input
+{
+	width:250px;
+	border-radius:5px;
+	border:1px solid #ddd;
+	height:25px;
+	padding:5px 10px 5px 40px
+}
+ 
+
+#reg-form button[type=submit]
+{
+	background-color :black;
+	
+	width:300px;
+	padding:10px;
+	border:0px;
+	color:white;
+	font-weight:bold
+}
+ 
+#reg-form button[type=submit]:hover
+{
+	background-color:gray;
+	cursor:pointer
+}
+ 
+#reg-form p a
+{
+    color: rgb(5, 171, 231);
+	text-decoration:none;
+	text-align:center;
+	font-family:Arial Narrow;
+	font-size:0.8em;
+}
+ 
+#reg-form p a:hover
+{
+	font-style:italic;
+	color:red;
+}
+
+.alert {
+    color: red;
+}

@@ -1,4 +1,4 @@
-<?php include("dataconnection.php"); ?>
+<?php include("Vincentdataconnection.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<?php include('jkai_admin_menu.php'); ?>
+<?php include("jkai_admin_menu.php"); ?>
 
   <div class="container">
     <h1>Member List</h1>
@@ -18,18 +18,21 @@
       
         <tr>
           <th>User's ID</th>
-          <th>User's Name</th>
+          <th>User's First Name</th>
+          <th>User's Last Name</th>
           <th>User's Email</th>
-          <th>User's Gender</th>
-          <th>User's Password</th>
+
         </tr>
 
         <?php
 			
-        $result = mysqli_query($connect, "SELECT * FROM member");	//$ result
-        $count = mysqli_num_rows($result);//used to count number of rows
+        $result = mysqli_query($connect, "SELECT * FROM member");	
+        if (!$result) {
+          die("Query failed: " . mysqli_error($connect));
+        }
+        $count = mysqli_num_rows($result);
         
-        while($row = mysqli_fetch_assoc($result))//$ row is based on each row in the table
+        while($row = mysqli_fetch_assoc($result))
         {
         
         ?>			
@@ -39,9 +42,6 @@
           <td><?php echo $row["UserName"] ?></td>
           <td><?php echo $row["UserLastName"] ?></td>
           <td><?php echo $row["UserEmail"] ?></td>
-          <td><?php echo $row["UserPassword"] ?></td>
-          
-          
         </tr>
         <?php
         
@@ -49,5 +49,6 @@
         
         ?>
     </Table>
-      
 
+    <button>Edit</button>
+      

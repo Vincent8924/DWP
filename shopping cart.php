@@ -132,10 +132,10 @@
             mysqli_select_db($connect,"hotel");
             if (isset($_POST['remove'])) {
                 $roomTypeToRemove = $_POST['room_type'];
-                $query = "DELETE FROM order WHERE room_type = '$roomTypeToRemove'";
+                $query = "DELETE FROM `order` WHERE room_type = '$roomTypeToRemove'";
                 mysqli_query($connect, $query);
             }
-			$result = mysqli_query($connect, "SELECT * FROM order");
+			$result = mysqli_query($connect, "SELECT * FROM `order`");
             $totalPrice = 0;	
 	         while($row = mysqli_fetch_assoc($result))
 				{
