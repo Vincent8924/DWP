@@ -24,7 +24,7 @@
           <th>Admin's Age</th>
           <th>Admin's Email</th>
           <th>Admin's Contact Number</th>
-
+          <th>Delete</th>
         </tr>
 
         <?php
@@ -44,6 +44,13 @@
           <td><?php echo $row["adminage"] ?></td>
           <td><?php echo $row["adminemail"] ?></td>
           <td><?php echo $row["admincontactnum"] ?></td>
+          <td>
+                  <form method="post" >
+                    <button type="submit" name="deleteadmin">Delete</button>
+                    <input type="hidden" name="delete" value="<?php echo $row['adminID']; ?>">
+                      
+                  </form>
+          </td>
         </tr>
         <?php
         
@@ -54,11 +61,27 @@
 
     <div class="button">
       <a href="editadmin.php"><button>Edit</button></a>
-      <a href="deleteadmin.php"><button>Delete</button></a>
       <a href="addadmin.php"><button>Add</button></a>
     </div>
     
 
     </div>
+
+    <?php
+                if (isset($_POST['deleteadmin'])) 
+                {
+                    $delete = $_POST['delete'];
+                    mysqli_query($connect, "DELETE FROM admin WHERE adminID = '$delete'");
+                
+                ?>
+                
+                <script type="text/javascript">
+                    alert("Record has been deleted!");
+                    window.location.href = "adminlist.php";
+                </script>
+
+            <?php
+                }
+            ?>
       
 

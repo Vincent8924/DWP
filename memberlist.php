@@ -21,6 +21,7 @@
           <th>User's First Name</th>
           <th>User's Last Name</th>
           <th>User's Email</th>
+          <th>Delete</th>
 
         </tr>
 
@@ -42,6 +43,13 @@
           <td><?php echo $row["UserName"] ?></td>
           <td><?php echo $row["UserLastName"] ?></td>
           <td><?php echo $row["UserEmail"] ?></td>
+          <td>
+                  <form method="post" >
+                    <button type="submit" name="deletemember">Delete</button>
+                    <input type="hidden" name="delete" value="<?php echo $row['UserID']; ?>">
+                      
+                  </form>
+          </td>
         </tr>
         <?php
         
@@ -54,9 +62,25 @@
 
     <div class="button">
       <a href="editmember.php"><button>Edit</button></a>
-      <a href="deletemember.php"><button>Delete</button></a>
       <a href="addmember.php"><button>Add</button></a>
      
     </div>
+
+    <?php
+                if (isset($_POST['deletemember'])) 
+                {
+                    $delete = $_POST['delete'];
+                    mysqli_query($connect, "DELETE FROM member WHERE UserID = '$delete'");
+                
+                ?>
+                
+                <script type="text/javascript">
+                    alert("Record has been deleted!");
+                    window.location.href = "memberlist.php";
+                </script>
+
+            <?php
+                }
+            ?>
     
       
