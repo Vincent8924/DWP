@@ -10,7 +10,7 @@
     </head>
     <body >
         
-    <?php include('jkai_menu.php'); ?>
+    <?php include('user_menu.php'); ?>
         </div>
         <br/>
         <div id="slideshow" class="container" >

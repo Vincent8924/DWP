@@ -131,7 +131,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
+body
+    {
+        
+        width: 90%; /* 设置容器宽度 */
+        margin: 0 auto; /* 将左右边距设置为自动以实现居中 */
+        
+    }   
 .order{
     margin: 0 auto;
     position: relative;

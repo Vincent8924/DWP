@@ -1,9 +1,9 @@
-
+<?php include('dataconnection.php'); ?>
 <html>
     <head>
         <meta charset="UTF-8"/>
         <link rel="icon" type="image/x-icon" href="title logo.ico">
-        <link rel="stylesheet" type="text/css" href="sales report.css">
+        <link rel="stylesheet" type="text/css" href="sales report.css" media="all">
 
         <title>Admin Sales Report</title>
   
@@ -20,79 +20,91 @@
 
             
             
-            <table cellspacing="5" cellpadding="5">
-                <thead>
-                  <tr>
+    <table cellspacing="5" cellpadding="5">
+            <thead>
+            <tr>
                     
                     
-                    <th colspan="2">Sales Report</th>
-                    
-                    
+                    <th rowspan="2">Years</th>
+                    <th rowspan="2">Total Sales</th>
+                    <th colspan="12">Monthly Sales</th>
+
                   </tr>
-                </thead>
+                  <tr>
+                    <th>Jan</th>
+                    <th>February</th>
+                    <th>March</th>
+                    <th>April</th>
+                    <th>May</th>
+                    <th>June</th>
+                    <th>July</th>
+                    <th>August</th>
+                    <th>September</th>
+                    <th>October</th>
+                    <th>November</th>
+                    <th>December</th>
+                    
+
+                  </tr>
+            </thead>
+
+            
+
+            
+            <tr>
                 
-                <tbody>
-                  <tr>
-                    <td><spam>Room No :</spam>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="text" class="field" placeholder="Room No"></td>
-                  </tr>
-                    
-                  <tr>
-                    <td>
-                      <spam style="margin-right: 20px ;">Room Type :</spam>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <select class="field">
-                            <option value="Presidential Suite">Presidential Suite</option>
-                            <option value="Executive Suite">Specialty Suite</option>
-                            <option value="Executive Suite">Executive Suite</option>
-                            <option value="Club Premier Room">Club Premier Room</option>
-                            <option value="Deluxe Rooms">Deluxe Rooms</option>                                  
-                        </select>
-                    </td>
-                  </tr>  
-
-                  <tr><td>Customer Name :
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="text" class="field" placeholder="Name"></td></tr>
-
-                  <tr><td>Booking Date :
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="date" class="field" placeholder="Booking Date"></td></tr>
-
-                  <tr><td>Check In :
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="date" class="field" placeholder="Check In"></td></tr>
-                  
-                  
-                    <tr><td>Check Out :
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      <input type="date" class="field" placeholder="Check Out"></td></tr>
-
-                  
-                    
-                  <tr>
-                    <td>Room Status :
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      <select class="field" >
-                        <option value="Vacant">Vacant</option>
-                        <option value="Booked">Booked</option>
-                        <option value="Occupied">Occupied</option>
-                        <option value="Cleaning">Cleaning</option>
-                        <option value="Under Maintenance">Under Maintenance</option>
-                        <option value="Cancelled">Cancelled</option>                                  
-                    </select>
-                    </td>
-                  </tr>
-                  
-                </tbody>
-                </table>
+                
+            </tr>
+          
+          </table>
                 <br/>
-                <button>Generate</button>
+                
                 
                 <button>Reset</button>
                 
-        
+                <script>
+            // JavaScript function to generate and print a dynamic report
+        function generateAndPrintReport() {
+            // Create a new document for the dynamic report
+            var newDoc = document.implementation.createHTMLDocument('Sales Report');
+
+            // Create a new div element for the dynamic report
+            var dynamicReportDiv = newDoc.createElement('div');
+            dynamicReportDiv.classList.add('dynamic-report');
+
+            // Add content to the dynamic report with inline styles
+            dynamicReportDiv.innerHTML =
+            '<br/><br/><div class="centre" style="text-align: center; margin: 0 auto;">' +
+            '<img src="KuanTan Hotels2.png" style="max-width: 100%; height: auto;">' +
+            '<h1>KuanTan Hotels</h1></div>' +
+            '<br/><hr/><br/>' +
+            '<h1><u>Sales Report</u></h1>' +
+            '<table cellspacing="5" cellpadding="5" style="background-color: #ffffff;color: #000000;border: 1px solid #ccc; margin-top: 10px;border: 10; width: 60%;">'+       
+            '<tr><td>Room No :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A1</td></tr>'+ 
+            '<tr><td>Room Type :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Presidential Suite</td></tr>'  + 
+            '<tr><td>Customer Name :&nbsp;&nbsp;&nbsp;&nbsp;LO JIN KAI</td></tr>'+ 
+            '<tr><td>Booking Date :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8-2-2024</td></tr>'+ 
+            '<tr><td>Check In :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10-2-2024</td></tr>'+ 
+            '<tr><td>Check Out :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12-2-2024</td></tr>'+ 
+            '<tr><td>Room Status :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Occupied</td></tr>'+ 
+            '</table>';
+
+            // Append the dynamic report to the new document's body
+            newDoc.body.appendChild(dynamicReportDiv);
+
+            // Print the dynamic report
+            newWin = window.open("");
+            newWin.document.write(newDoc.documentElement.innerHTML);
+            newWin.document.close();
+            newWin.print();
+            newWin.close();
+        }
+
+        </script>
+
+        <button onclick="generateAndPrintReport()">Generate</button>
+
+               
     </body>
 
 

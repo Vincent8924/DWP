@@ -9,7 +9,11 @@ table {
 
     }
    
-
+    .white
+    {
+        color: white;
+        text-decoration: none;
+    }
     body
     {
         
@@ -69,4 +73,17 @@ button {
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
+   
   }
+
+.pointer
+{
+    pointer-events: none;
+}
+
+.size
+{
+    width: 300px;
+}
+
+

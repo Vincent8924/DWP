@@ -20,12 +20,12 @@ CREATE TABLE `Comment` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE `room_status` (
-  `room_no` INT NOT NULL PRIMARY KEY,
+  `room_no` varchar(100) NOT NULL PRIMARY KEY,
   `room_type` varchar(100) NOT NULL,
   `room_status` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-CREATE TABLE `Rating/Comment` (
+CREATE TABLE `rating/comment` (
   `first_name` varchar(200) NOT NULL,
   `last_name` varchar(200) NOT NULL,
   `room_type` varchar(100) NOT NULL,
@@ -90,27 +90,21 @@ VALUES
   <br/>
   Amazing views of the city.');
 
-  
-CREATE TABLE `order` (
-  `room_type` varchar(100) NOT NULL,
-  `booking_date` DATE NOT NULL,
-  `check_in` DATE NOT NULL,
-  `check_out` DATE NOT NULL,
-  `days` INT NOT NULL,
-  `total_price` INT NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-CREATE TABLE `user_order`(
-`first_name` varchar(200) NOT NULL,
-  `last_name` varchar(200) NOT NULL,
-  `room_type` varchar(100) NOT NULL,
-  `booking_date` DATE NOT NULL,
-  `check_in` DATE NOT NULL,
-  `check_out` DATE NOT NULL,
-  `days` INT NOT NULL,
-  `method` varchar(200) NOT NULL,
-  `price` INT NOT NULL
-)
+CREATE TABLE `user_order` (
+	`id` INT NOT NULL AUTO_INCREMENT ,
+	`first_name` varchar(200) NOT NULL,
+	`last_name` varchar(200) NOT NULL,
+	`room_type` varchar(100) NOT NULL,
+	`booking_date` DATE NOT NULL,
+	`check_in` DATE NOT NULL,
+	`check_out` DATE NOT NULL,
+	`days` INT NOT NULL,
+	`method` varchar(200) NOT NULL,
+	`price` INT NOT NULL,
+	PRIMARY KEY (`id`)
+);
+
 
 
 
