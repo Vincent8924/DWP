@@ -1,0 +1,126 @@
+#logo
+{
+    height: 50px;
+
+}
+
+body
+{
+    
+    width: 90%; /* 设置容器宽度 */
+    margin: 0 auto; /* 将左右边距设置为自动以实现居中 */
+    
+}
+
+.choice a
+{
+  font-size: 20px;
+  text-decoration: none; 
+  color: white; 
+  margin-left: 50px;
+  position: relative;
+  top: 8px;
+}
+#line 
+{
+    border: 0px;
+    background-image: url('线条.png');
+    background-repeat: repeat-x;
+    height: 40px;
+}
+
+a.nowpage
+{
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px; 
+}
+
+
+
+.container {
+  max-width: 90%;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+button {
+  width: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+ 
+}
+
+.button
+{
+  text-align: right;
+}
+
+button:hover
+{
+   background-color: grey;
+}
+
+.edit
+{
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+.edit table{
+    border: #000 solid 2px;
+    width: 100%;
+    margin: auto;
+}
+.edit input
+{
+    text-align: center;
+}
+.edit button
+{
+    margin-top: 10px;
+}
+.alert
+{
+    color: red;
+}
+
+.buttonback
+{
+    
+    text-align: right;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.back:hover
+{
+    background-color: red;
+}
+
+h2
+{
+    text-align: left;
+}

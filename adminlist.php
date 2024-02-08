@@ -53,9 +53,9 @@
     </Table>
 
     <div class="button">
-     <button>Edit</button>
-     <button>Delete</button>
-     <button>Add</button>
+      <a href="editadmin.php"><button>Edit</button></a>
+      <a href="deleteadmin.php"><button>Delete</button></a>
+      <a href="addadmin.php"><button>Add</button></a>
     </div>
     
 
