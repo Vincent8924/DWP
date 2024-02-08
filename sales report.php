@@ -14,22 +14,52 @@
         
     <?php include('jkai_admin_menu.php'); ?>
  
+    <br/><br/><br/><br/>
+    <?php
         
 
+        // 查询数据库
+        $sql = "SELECT booking_date, price FROM user_order";
+        $result = $connect->query($sql);
+
+        // 创建数组来存储每个年份的总销售额和每个月份的销售额
+        $yearlyTotal = array();
+        $monthlyTotal = array();
+
+        // 处理查询结果
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $date = strtotime($row["booking_date"]);
+                $year = date("Y", $date);
+                $month = date("n", $date);
+
+                // 计算每个年份的总销售额
+                if (!isset($yearlyTotal[$year])) {
+                    $yearlyTotal[$year] = 0;
+                }
+                $yearlyTotal[$year] += $row["price"];
+
+                // 计算每个月份的销售额
+                if (!isset($monthlyTotal[$year][$month])) {
+                    $monthlyTotal[$year][$month] = 0;
+                }
+                $monthlyTotal[$year][$month] += $row["price"];
+            }
+        }
+
+
+        ?>
         
 
             
             
-    <table cellspacing="5" cellpadding="5">
+    <table class="" cellspacing="5" cellpadding="5">
             <thead>
             <tr>
-                    
-                    
-                    <th rowspan="2">Years</th>
-                    <th rowspan="2">Total Sales</th>
-                    <th colspan="12">Monthly Sales</th>
-
-                  </tr>
+                <th rowspan="2">Years</th>
+                <th rowspan="2">Total Sales</th>
+                <th colspan="12">Monthly Sales</th>
+            </tr>
                   <tr>
                     <th>Jan</th>
                     <th>February</th>
@@ -47,63 +77,57 @@
 
                   </tr>
             </thead>
+            <tbody>
+            <?php
+            // 显示每个年份的总销售额和每个月份的销售额
+            foreach ($yearlyTotal as $year => $total) {
+                echo "<tr>";
+                echo "<td>$year</td>";
+                echo "<td>$total</td>";
+                for ($month = 1; $month <= 12; $month++) {
+                    $monthlyAmount = isset($monthlyTotal[$year][$month]) ? $monthlyTotal[$year][$month] : 0;
+                    echo "<td>$monthlyAmount</td>";
+                }
+                echo "</tr>";
+            }
+            ?>
+    </tbody>
 
-            
-
-            
-            <tr>
-                
-                
-            </tr>
           
           </table>
                 <br/>
                 
                 
-                <button>Reset</button>
                 
-                <script>
-            // JavaScript function to generate and print a dynamic report
-        function generateAndPrintReport() {
-            // Create a new document for the dynamic report
-            var newDoc = document.implementation.createHTMLDocument('Sales Report');
+                
+                <button onclick="printSalesReport()">Print Report</button>
+    <script>
+        function printSalesReport() {
+            // 创建新窗口
+            var printWindow = window.open('', '_blank');
 
-            // Create a new div element for the dynamic report
-            var dynamicReportDiv = newDoc.createElement('div');
-            dynamicReportDiv.classList.add('dynamic-report');
+            // 添加自定义内容
+            printWindow.document.write(
+                '<html><head><title>Sales Report</title>' +
+                '</head><body>' +
+                '<br/><br/><div class="centre" style="text-align: center; margin: 0 auto;">' +
+                '<br/><hr/><br/><br/><img src="KuanTan Hotels2.png" style="max-width: 100%; height: auto;">' +
+                '<h1>KuanTan Hotels</h1></div>' +
+                '<br/><hr/><br/>' +
+                '<h1><u>Sales Report</u></h1>' +
+                '<table class="t">' +
+                // 将表格内容插入
+                document.getElementsByTagName('table')[0].outerHTML +
+                '</table></body></html>'
+            );
 
-            // Add content to the dynamic report with inline styles
-            dynamicReportDiv.innerHTML =
-            '<br/><br/><div class="centre" style="text-align: center; margin: 0 auto;">' +
-            '<img src="KuanTan Hotels2.png" style="max-width: 100%; height: auto;">' +
-            '<h1>KuanTan Hotels</h1></div>' +
-            '<br/><hr/><br/>' +
-            '<h1><u>Sales Report</u></h1>' +
-            '<table cellspacing="5" cellpadding="5" style="background-color: #ffffff;color: #000000;border: 1px solid #ccc; margin-top: 10px;border: 10; width: 60%;">'+       
-            '<tr><td>Room No :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A1</td></tr>'+ 
-            '<tr><td>Room Type :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Presidential Suite</td></tr>'  + 
-            '<tr><td>Customer Name :&nbsp;&nbsp;&nbsp;&nbsp;LO JIN KAI</td></tr>'+ 
-            '<tr><td>Booking Date :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8-2-2024</td></tr>'+ 
-            '<tr><td>Check In :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10-2-2024</td></tr>'+ 
-            '<tr><td>Check Out :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12-2-2024</td></tr>'+ 
-            '<tr><td>Room Status :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Occupied</td></tr>'+ 
-            '</table>';
-
-            // Append the dynamic report to the new document's body
-            newDoc.body.appendChild(dynamicReportDiv);
-
-            // Print the dynamic report
-            newWin = window.open("");
-            newWin.document.write(newDoc.documentElement.innerHTML);
-            newWin.document.close();
-            newWin.print();
-            newWin.close();
-        }
-
-        </script>
-
-        <button onclick="generateAndPrintReport()">Generate</button>
-
+            // 请确保在加载完成后执行打印
+            
+                printWindow.print();
+                printWindow.close();
+            
+        };
+    </script>
                
     </body>
 

@@ -38,6 +38,7 @@ CREATE TABLE `room_category` (
   `room_quantity` INT NOT NULL,
   `picture` varchar(100) NOT NULL,
   `price` INT NOT NULL,
+  `page ` varchar(200),
   `comment` varchar(500)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
