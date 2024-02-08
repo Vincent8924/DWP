@@ -1,14 +1,4 @@
-table {
-  background-color: #ffffff;
-  color: #000000;
-  border: 1px solid #ccc;
-  margin: 0 auto;
-  margin-top: 10px    ;
-  border: 10;
-  width: 100%;
 
-  }
- 
   
   body
   {
@@ -23,15 +13,8 @@ table {
       float: right;
   }
 
-  thead {
-  background-color: #eeeeee;
-  text-align: center;
-  }
 
-  td {
-  padding: 10px;
-  text-align: left;
-  }
+
   
  
   #logo
@@ -69,13 +52,88 @@ button {
   cursor: pointer;
 }
 
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+thead {
+  background-color: #eeeeee;
+  text-align: center;
+  }
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+
+.centre {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Print styles */
 @media print {
   body * {
+      visibility: visible;
+  }
+
+  /* Hide elements that you don't want to print */
+  body *:not(table, th, td, tr, .centre) {
       visibility: hidden;
   }
 
-  /* Specify the elements you want to print */
-  .printable-content {
-      visibility: visible !important;
-  }
+  /* Additional print styles */
+table {
+  border-collapse: collapse;
+  width: 100%;
 }
+thead {
+background-color: #eeeeee;
+text-align: center;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+
+  .centre {
+      text-align: center;
+      margin: 0 auto;
+  }
+
+  /* You may need to adjust additional styles */
+  body {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+  }
+
+  h1 {
+      font-size: 24px;
+  }
+
+  /* Add any other styles here to match your original styling */
+}
+
+
+.table_design
+{
+/* Additional print styles */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+thead {
+background-color: #eeeeee;
+text-align: center;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+}
+
