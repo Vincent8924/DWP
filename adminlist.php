@@ -52,7 +52,11 @@
         ?>
     </Table>
 
-    <button><span>Edit</span></button>
+    <div class="button">
+     <button>Edit</button>
+     <button>Delete</button>
+     <button>Add</button>
+    </div>
     
 
     </div>
