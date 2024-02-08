@@ -10,7 +10,7 @@
     font-size: 20px;
     text-decoration: none;
     color: white;
-    margin-left: 100px;
+    margin-left: 65px;
     position: relative;
     top: 8px;
     display: inline-block; 
@@ -24,12 +24,13 @@
     <div id="line">
         <div class="choice">
             <?php
-            echo "<a href='index.php'>HOME</a>";
+            echo "<a href='home.php'>HOME</a>";
             echo "<a href='room list.php'>ROOM</a>";
             echo "<a href='aboutus.php'>ABOUT</a>";
             echo "<a href='contact.php'>CONTACT</a>";
             echo "<a href='rating&comment.php'>RATING & COMMENT</a>";
             echo "<a href='shopping cart.php'>CART</a>";
+            echo "<a href='index.php' onclick='return adminconfirmation();'><img src='image/logout.png' style='width: 20px; height: 20px;'>LOG OUT</a>";   
             ?>
         </div>
     </div>
