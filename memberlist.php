@@ -48,7 +48,14 @@
         }
         
         ?>
+
+      
     </Table>
 
-    <button>Edit</button>
+    <div class="button">
+     <button>Edit</button>
+     <button>Delete</button>
+     <button>Add</button>
+    </div>
+    
       

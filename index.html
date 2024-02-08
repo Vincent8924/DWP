@@ -71,17 +71,17 @@
         });
 
         $(function() {
-            var images = $(".index_container img"); // 获取所有图片
+            var images = $(".index_container img"); 
 
-            var currentIndex = 0; // 当前图片索引
+            var currentIndex = 0; 
 
             setInterval(function() {
-                images.eq(currentIndex).removeClass("active"); // 移除当前图片的 active 类
+                images.eq(currentIndex).removeClass("active"); 
 
-                currentIndex = (currentIndex + 1) % images.length; // 计算下一张图片的索引
+                currentIndex = (currentIndex + 1) % images.length; 
 
-                images.eq(currentIndex).addClass("active"); // 添加下一张图片的 active 类
-            }, 3000); // 设置切换间隔时间，单位为毫秒
+                images.eq(currentIndex).addClass("active"); 
+            }, 3000); 
         }); 
     </script>
 </html>

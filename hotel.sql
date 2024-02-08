@@ -25,7 +25,7 @@ CREATE TABLE `room_status` (
   `room_status` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-CREATE TABLE `Rating/Comment` (
+CREATE TABLE `rating/comment` (
   `first_name` varchar(200) NOT NULL,
   `last_name` varchar(200) NOT NULL,
   `room_type` varchar(100) NOT NULL,
@@ -41,6 +41,27 @@ CREATE TABLE `room_category` (
   `page ` varchar(200),
   `comment` varchar(500)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE `admin` (
+  `adminID` int(6) UNSIGNED ZEROFILL NOT NULL,
+  `adminname` varchar(255) NOT NULL,
+  `adminlastname` varchar(255) NOT NULL,
+  `adminage` int(3) NOT NULL,
+  `adminemail` varchar(255) NOT NULL,
+  `admincontactnum` int(15) NOT NULL,
+  `adminpassword` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+
+CREATE TABLE `member` (
+  `UserID` int(6) UNSIGNED ZEROFILL NOT NULL,
+  `UserName` varchar(255) NOT NULL,
+  `UserLastName` varchar(255) NOT NULL,
+  `UserEmail` varchar(255) NOT NULL,
+  `UserPassword` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 INSERT INTO `room_category`(`room_type`, `room_quantity`, `picture`, `price`,`page`,`comment`) 
@@ -84,6 +105,8 @@ CREATE TABLE `user_order` (
 	`price` INT NOT NULL,
 	PRIMARY KEY (`id`)
 );
+
+
 
 
 

@@ -63,24 +63,23 @@ th {
 }
 
 
-
 button {
   width: 100px;
   padding: 10px;
   border: 1px solid #ccc;
   background-color: #000;
   color: #fff;
-  border-radius: 5px; 
+  border-radius: 5px;
+  cursor: pointer;
+ 
+}
+
+.button
+{
   text-align: right;
 }
 
-button span {
-  display: inline-block;
-  width: 100%;
-  text-align: inherit;
+button:hover
+{
+   background-color: grey;
 }
-  
-button:hover {
-  background-color: #5b5f5b;
-}
-
